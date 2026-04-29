@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stars of Bharati</title>
+<style>
+:root{--cyan:#5ee7ff;--gold:#ffd166;--green:#76ffb8;--pink:#ff7ad9;--text:#f7fbff;--muted:#bdd0df;--line:rgba(255,255,255,.16)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 20% 0%,rgba(255,122,217,.24),transparent 24%),radial-gradient(circle at 80% 10%,rgba(118,255,184,.22),transparent 26%),radial-gradient(circle at top left,#0c6b91 0,#06111f 34%,#030812 100%);min-height:100vh;overflow-x:hidden}.aurora{position:fixed;inset:-10% -20% auto -20%;height:50vh;pointer-events:none;opacity:.55;filter:blur(34px);background:linear-gradient(100deg,transparent 2%,rgba(52,211,153,.66),rgba(56,189,248,.58),rgba(167,139,250,.55),rgba(255,122,217,.42),rgba(255,209,102,.22),transparent 90%);animation:aurora 13s ease-in-out infinite alternate}@keyframes aurora{from{transform:translateX(-4%) skewY(-9deg)}to{transform:translateX(5%) skewY(-4deg)}}.wrap{position:relative;max-width:1280px;margin:auto;padding:24px}.card{background:linear-gradient(145deg,rgba(8,20,44,.92),rgba(18,35,70,.84));border:1px solid rgba(94,231,255,.18);border-radius:28px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.25);backdrop-filter:blur(12px)}.siteTitle{text-align:center;margin-bottom:18px}.expeditionLine{color:#fff4c8;letter-spacing:.34em;text-transform:uppercase;font-weight:1000;font-size:17px;text-shadow:0 0 18px rgba(255,209,102,.45)}.siteTitle h1{font-size:76px;margin:4px 0;text-transform:uppercase;letter-spacing:.08em;font-weight:1000;background:linear-gradient(90deg,#8a5a00,#fff1a8,#ffd166,#fff8d6,#b7791f,#fff1a8);background-size:300% 100%;-webkit-background-clip:text;color:transparent;-webkit-text-stroke:1.6px #6b1f1f;text-shadow:2px 2px 0 #6b1f1f,0 0 18px rgba(255,209,102,.55);animation:gold 4s linear infinite}@keyframes gold{to{background-position:300% 50%}}.siteTitle h2{font-size:24px;color:var(--muted)}h2{margin:0 0 12px;font-size:26px}h3{margin:0 0 10px}p{color:var(--muted);line-height:1.6}.kicker{letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-size:12px;font-weight:800}.grid{display:grid;gap:18px}.grid2{grid-template-columns:1.25fr .75fr}.grid3{grid-template-columns:repeat(3,1fr)}.header{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.stat{background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(94,231,255,.06));border:1px solid var(--line);border-radius:20px;padding:14px}.stat small{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:11px}.stat b{display:block}button,input,select,textarea{font:inherit;font-size:16px}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:16px;background:rgba(2,8,18,.72);color:var(--text);padding:13px;outline:none}textarea{min-height:86px;resize:vertical}button{border:0;border-radius:16px;padding:12px 16px;cursor:pointer;font-weight:800;color:#03131c;background:var(--cyan)}button.secondary{background:rgba(255,255,255,.075);color:var(--text);border:1px solid var(--line)}button.green{background:var(--green)}button.danger{background:#ff7b93}.hidden{display:none!important}.bigFact{overflow:hidden;border-radius:26px;border:1px solid rgba(94,231,255,.25);background:rgba(94,231,255,.08);padding:16px 0;margin:18px 0}.bigFact span{display:inline-block;padding-left:100%;animation:slowFact 620s linear infinite;color:#e6fbff;font-size:24px;font-weight:800;white-space:nowrap}@keyframes slowFact{to{transform:translateX(-100%)}}.gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:16px}.galleryMain,.gallerySmall{border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.07);overflow:hidden;min-height:190px;position:relative}.galleryMain{min-height:330px}.gallery img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;cursor:pointer}.galleryCaption{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(2,8,18,.62);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:10px;color:#fff}.photoGallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:14px;max-height:420px;overflow:auto}.photoThumb{height:120px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.18);cursor:pointer}.photoThumb img{width:100%;height:100%;object-fit:cover;transition:.25s}.photoThumb:hover img{transform:scale(1.08)}.memberRail{height:780px;overflow:hidden;position:relative;border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.045)}.leaderFixed{position:absolute;top:12px;left:12px;right:12px;z-index:8;background:linear-gradient(145deg,rgba(255,209,102,.20),rgba(94,231,255,.12));border:1px solid rgba(255,209,102,.42);border-radius:22px}.scrollWindow{position:absolute;left:0;right:0;top:132px;bottom:0;overflow:hidden}.memberTrack{position:absolute;left:0;right:0;top:0;animation:crewScroll 92s linear infinite;padding:12px}.memberRail:hover .memberTrack{animation-play-state:paused}@keyframes crewScroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}.memberMini{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:20px;padding:11px;margin-bottom:10px;transition:.25s}.memberMini:hover,.memberMini.zoomed{transform:scale(1.045);box-shadow:0 18px 38px rgba(94,231,255,.22);border-color:rgba(255,209,102,.48)}.avatar{width:62px;height:62px;border-radius:18px;background:linear-gradient(135deg,#79e4ff,#eefbff);color:#062033;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;flex:0 0 auto;object-fit:cover;border:1px solid rgba(255,255,255,.35);cursor:pointer}.memberMini small{color:var(--cyan);display:block;margin-top:6px}.memberMini p{margin:4px 0 0;font-size:12px;line-height:1.36}.hof{border:1px solid rgba(255,209,102,.35);background:linear-gradient(90deg,rgba(255,209,102,.14),rgba(94,231,255,.08));border-radius:24px;padding:14px;margin-top:16px;color:#fff4c8}.award{border-left:4px solid var(--gold)}.notice{border:1px solid rgba(255,209,102,.35);background:rgba(255,209,102,.08);border-radius:18px;padding:14px;color:#fff2c2}.row,.tabs{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.progress{height:14px;background:rgba(255,255,255,.1);border-radius:20px;overflow:hidden}.progress div{height:100%;background:linear-gradient(90deg,var(--cyan),var(--green),var(--gold));transition:.3s}.rank{display:grid;grid-template-columns:1fr;gap:10px}.rankCard{background:linear-gradient(145deg,rgba(94,231,255,.10),rgba(255,122,217,.08));border:1px solid var(--line);border-radius:18px;padding:12px}.table{width:100%;border-collapse:collapse}.table th,.table td{border-bottom:1px solid var(--line);padding:10px;text-align:left;color:var(--muted)}.table th{color:#fff}.photoModal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;padding:20px}.photoModal.open{display:flex}.photoModal img{max-width:94vw;max-height:86vh;object-fit:contain;border-radius:20px;border:2px solid rgba(255,255,255,.35)}.photoModal .modalClose{position:absolute;top:18px;right:18px;background:#ffd166}.photoModal .modalPrev,.photoModal .modalNext{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,209,102,.92);color:#06111f}.photoModal .modalPrev{left:18px}.photoModal .modalNext{right:18px}.cert{width:1122px;height:793px;max-width:100%;background:linear-gradient(135deg,rgba(255,255,255,.40),rgba(232,249,255,.40)),url("photos/bharati_station.jpeg");background-size:cover;background-position:center;color:#071827;border:16px double #0b6b8e;border-radius:18px;padding:34px 46px;margin:18px auto;text-align:center;position:relative;overflow:hidden}.certLogoLeft,.certLogoRight{position:absolute;top:30px;width:92px;height:92px;object-fit:contain;background:rgba(255,255,255,.82);border-radius:16px;padding:6px}.certLogoLeft{left:34px}.certLogoRight{right:34px}.cert h2{font-size:24px;color:#0b4761;margin:72px 0 6px;text-transform:uppercase;font-weight:900;letter-spacing:.14em}.cert h3{font-size:48px;margin:8px 0 10px;font-weight:1000;text-transform:uppercase;background:linear-gradient(90deg,#8a5a00,#fff1a8,#ffd166,#fff8d6,#b7791f,#fff1a8);background-size:300% 100%;-webkit-background-clip:text;color:transparent;-webkit-text-stroke:1.1px #6b1f1f;text-shadow:1px 1px 0 #6b1f1f,0 0 14px rgba(255,209,102,.55);animation:gold 4s linear infinite}.cert .winner{font-size:46px;font-weight:1000;color:#062033;margin:20px 0;text-transform:uppercase}.cert p{color:#17384a;font-size:19px;line-height:1.45;font-weight:700}.cert .appreciation{margin:18px auto;max-width:800px;background:rgba(255,255,255,.72);border-radius:18px;padding:14px 22px;font-size:20px;font-weight:900;color:#17384a}.footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}@page{size:A4 landscape;margin:8mm}@media print{*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.noPrint,.header,.bigFact,#app>section:not(.printable){display:none!important}.cert{width:277mm;height:190mm;margin:0 auto;page-break-after:always}.cert h3{color:#b7791f!important;background:none!important;-webkit-text-fill-color:#b7791f!important}}@media(max-width:940px){.header,.grid2,.grid3,.gallery{grid-template-columns:1fr}.wrap{padding:10px}.siteTitle h1{font-size:clamp(34px,12vw,54px)}.bigFact span{font-size:18px}.memberRail{height:520px}.scrollWindow{top:145px}}
+
+.triviaBoard{
+  margin-top:16px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:18px;
+  overflow:hidden;
+  background:rgba(255,255,255,.06);
+}
+.triviaBoard table{
+  width:100%;
+  border-collapse:collapse;
+}
+.triviaBoard th,.triviaBoard td{
+  padding:9px 10px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  text-align:left;
+  color:#dff8ff;
+  font-size:14px;
+}
+.triviaBoard th{
+  color:#fff4c8;
+  background:rgba(255,209,102,.10);
+}
+.triviaScorePills{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:10px 0;
+}
+.triviaScorePills span{
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.07);
+  border-radius:999px;
+  padding:7px 10px;
+  font-weight:800;
+}
+
+
+/* Manual + auto scroll support for Meet the 45th ISEA Team */
+.scrollWindow{
+  overflow-y:auto !important;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(255,209,102,.7) rgba(255,255,255,.08);
+}
+.scrollWindow::-webkit-scrollbar{width:8px}
+.scrollWindow::-webkit-scrollbar-track{background:rgba(255,255,255,.08);border-radius:999px}
+.scrollWindow::-webkit-scrollbar-thumb{background:rgba(255,209,102,.7);border-radius:999px}
+.scrollWindow.manualScroll .memberTrack{animation-play-state:paused !important;}
+
+
+/* Premium WhatsApp-status style winner badges */
+.premiumBadgeWrap{
+  width:720px;
+  height:1280px;
+  max-width:96vw;
+  margin:28px auto;
+  border-radius:42px;
+  padding:28px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(255,255,255,.35),transparent 12%),
+    radial-gradient(circle at 78% 18%,rgba(255,209,102,.36),transparent 18%),
+    radial-gradient(circle at 50% 105%,rgba(94,231,255,.34),transparent 28%),
+    linear-gradient(160deg,#06111f 0%,#0b2346 32%,#10405a 58%,#080b1a 100%);
+  border:5px solid rgba(255,209,102,.86);
+  box-shadow:0 28px 90px rgba(0,0,0,.55), inset 0 0 50px rgba(94,231,255,.14);
+  color:#fff;
+}
+.premiumBadgeWrap:before{
+  content:"";
+  position:absolute;
+  inset:-25%;
+  background:
+    linear-gradient(105deg,transparent 10%,rgba(118,255,184,.26),rgba(94,231,255,.24),rgba(255,122,217,.18),transparent 70%);
+  filter:blur(28px);
+  transform:rotate(-10deg);
+  animation:aurora 9s ease-in-out infinite alternate;
+}
+.premiumBadgeInner{
+  position:relative;
+  z-index:2;
+  height:100%;
+  border:2px solid rgba(255,255,255,.22);
+  border-radius:32px;
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.025));
+  backdrop-filter:blur(5px);
+}
+.badgeLogos{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:92px;
+}
+.badgeLogos img{
+  width:92px;
+  height:92px;
+  object-fit:contain;
+  background:rgba(255,255,255,.90);
+  border-radius:22px;
+  padding:8px;
+  border:2px solid rgba(255,209,102,.70);
+}
+.badgeSmallTitle{
+  margin-top:34px;
+  color:#dff8ff;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  font-weight:900;
+  font-size:18px;
+}
+.badgeAward{
+  margin:22px auto 8px;
+  font-size:54px;
+  line-height:1.05;
+  font-weight:1000;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,#9b5c00,#fff1a8,#ffd166,#fff8d6,#b7791f,#fff1a8);
+  background-size:300% 100%;
+  -webkit-background-clip:text;
+  color:transparent;
+  -webkit-text-stroke:1.2px #6b1f1f;
+  text-shadow:2px 2px 0 #6b1f1f,0 0 18px rgba(255,209,102,.55);
+  animation:gold 4s linear infinite;
+}
+.badgeMedal{
+  width:210px;
+  height:210px;
+  margin:28px auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:94px;
+  background:
+    radial-gradient(circle at 35% 25%,#fff8d6,#ffd166 38%,#b7791f 72%,#5a3300 100%);
+  border:8px double #fff1a8;
+  box-shadow:0 0 42px rgba(255,209,102,.45), inset 0 0 35px rgba(255,255,255,.35);
+}
+.badgeWinnerLabel{
+  color:#aeefff;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:17px;
+  font-weight:900;
+}
+.badgeWinnerName{
+  margin:12px 0 18px;
+  font-size:54px;
+  line-height:1.06;
+  font-weight:1000;
+  text-transform:uppercase;
+  color:#fff;
+  text-shadow:0 0 22px rgba(94,231,255,.45),2px 2px 0 rgba(0,0,0,.42);
+}
+.badgeMonth{
+  margin:8px auto 0;
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:999px;
+  background:rgba(255,209,102,.16);
+  border:1px solid rgba(255,209,102,.5);
+  color:#fff4c8;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.badgeFooter{
+  margin-top:auto;
+  padding-top:26px;
+}
+.badgeStation{
+  font-size:30px;
+  font-weight:1000;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#fff4c8;
+}
+.badgeTagline{
+  margin-top:12px;
+  color:#d7f7ff;
+  font-size:20px;
+  font-weight:700;
+}
+.badgeRibbon{
+  position:absolute;
+  left:-80px;
+  right:-80px;
+  bottom:105px;
+  transform:rotate(-5deg);
+  padding:16px;
+  background:linear-gradient(90deg,rgba(255,209,102,.0),rgba(255,209,102,.34),rgba(94,231,255,.28),rgba(255,209,102,.0));
+  color:#fff;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+@media print{
+  .premiumBadgeWrap{
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+    page-break-after:always;
+    box-shadow:none !important;
+  }
+}
+
+
+/* PREMIUM BADGE V2 (MEDAL / SHIELD STYLE) */
+.badgeCanvas{
+  width:420px;
+  height:420px;
+  margin:20px auto;
+  border-radius:30px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 30% 20%,rgba(255,255,255,.25),transparent 20%),
+    radial-gradient(circle at 70% 80%,rgba(94,231,255,.25),transparent 25%),
+    linear-gradient(145deg,#041221,#0b2e4d,#09253f,#03070f);
+  border:4px solid rgba(255,209,102,.9);
+  box-shadow:0 0 30px rgba(255,209,102,.4), inset 0 0 30px rgba(94,231,255,.2);
+}
+
+.badgeInner{
+  position:absolute;
+  inset:10px;
+  border-radius:24px;
+  border:2px solid rgba(255,255,255,.2);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:16px;
+}
+
+.badgeIcon{
+  width:90px;
+  height:90px;
+  margin-bottom:10px;
+  filter:drop-shadow(0 0 10px rgba(255,215,0,.7));
+}
+
+.badgeAwardTitle{
+  font-size:20px;
+  font-weight:900;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,#ffd166,#fff,#ffd166);
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:1px 1px 0 #5a2b00;
+}
+
+.badgeWinner{
+  font-size:22px;
+  font-weight:900;
+  margin:8px 0;
+}
+
+.badgeMonth{
+  font-size:12px;
+  opacity:.8;
+}
+
+.badgeFooter{
+  font-size:12px;
+  margin-top:6px;
+  opacity:.8;
+}
+
+
+/* === Premium Individual Shield Winner Badges V3 === */
+.shieldBadgeGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+  gap:24px;
+  align-items:start;
+  margin:24px auto;
+  max-width:1180px;
+}
+.shieldBadgeCard{
+  text-align:center;
+}
+.shieldBadge{
+  width:320px;
+  height:520px;
+  max-width:92vw;
+  margin:0 auto 14px;
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 22% 10%,rgba(255,255,255,.18),transparent 13%),
+    radial-gradient(circle at 80% 18%,rgba(94,231,255,.22),transparent 18%),
+    linear-gradient(180deg,#06111f 0%,#09223f 34%,#07192f 72%,#02060f 100%);
+  border:2px solid rgba(255,209,102,.72);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.55),
+    inset 0 0 48px rgba(94,231,255,.12),
+    0 0 28px rgba(255,209,102,.24);
+  color:#fff;
+}
+.shieldBadge:before{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+    linear-gradient(110deg,transparent 10%,rgba(94,231,255,.25),rgba(118,255,184,.24),rgba(255,122,217,.18),transparent 72%);
+  filter:blur(22px);
+  transform:rotate(-13deg);
+  animation:aurora 10s ease-in-out infinite alternate;
+  opacity:.9;
+}
+.shieldBadge:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at center 18%,transparent 0 36%,rgba(0,0,0,.18) 58%,rgba(0,0,0,.42) 100%),
+    linear-gradient(180deg,rgba(255,255,255,.06),transparent 28%,rgba(0,0,0,.18));
+  pointer-events:none;
+}
+.shieldSnow{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1.6px),
+    radial-gradient(circle,rgba(255,255,255,.45) 1px,transparent 1.4px);
+  background-size:34px 34px,58px 58px;
+  background-position:0 0,12px 20px;
+  opacity:.28;
+}
+.shieldFrame{
+  position:absolute;
+  left:50%;
+  top:26px;
+  transform:translateX(-50%);
+  width:245px;
+  height:295px;
+  z-index:3;
+}
+.shieldFrame svg{
+  width:100%;
+  height:100%;
+  filter:drop-shadow(0 18px 20px rgba(0,0,0,.55)) drop-shadow(0 0 12px rgba(255,209,102,.35));
+}
+.shieldIconArt{
+  position:absolute;
+  left:50%;
+  top:80px;
+  transform:translateX(-50%);
+  width:168px;
+  height:168px;
+  z-index:4;
+  filter:drop-shadow(0 0 12px rgba(255,209,102,.45));
+}
+.shieldAwardText{
+  position:absolute;
+  left:28px;
+  right:28px;
+  top:248px;
+  z-index:5;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:21px;
+  line-height:1.05;
+  font-weight:900;
+  text-transform:uppercase;
+  color:#ffd166;
+  text-shadow:
+    1px 1px 0 #4a1f00,
+    0 0 12px rgba(255,209,102,.5);
+  letter-spacing:.025em;
+}
+.shieldMonth{
+  position:absolute;
+  top:336px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:5;
+  color:#fff;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:18px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:800;
+  text-shadow:0 0 10px rgba(94,231,255,.45);
+}
+.shieldWinnerLabel{
+  position:absolute;
+  top:370px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:5;
+  color:#fff4c8;
+  font-size:13px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.shieldWinnerName{
+  position:absolute;
+  top:394px;
+  left:14px;
+  right:14px;
+  z-index:5;
+  color:#ffd166;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:30px;
+  line-height:1.05;
+  font-weight:900;
+  text-shadow:
+    1px 1px 0 #4a1f00,
+    0 0 16px rgba(255,209,102,.45);
+}
+.shieldStation{
+  position:absolute;
+  left:16px;
+  right:16px;
+  bottom:32px;
+  z-index:5;
+  color:#dff8ff;
+  font-size:18px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:900;
+  text-shadow:0 0 12px rgba(94,231,255,.5);
+}
+.shieldDownloadBtn{
+  margin:8px auto 22px;
+  padding:10px 18px;
+  border-radius:14px;
+  border:1px solid rgba(255,209,102,.5);
+  background:linear-gradient(135deg,rgba(255,209,102,.95),rgba(255,241,168,.96));
+  color:#06111f;
+  font-weight:1000;
+}
+.shieldNote{
+  color:var(--muted);
+  text-align:center;
+  margin:12px 0 18px;
+}
+@media(max-width:720px){
+  .shieldBadge{width:300px;height:500px}
+  .shieldFrame{width:230px;height:276px}
+  .shieldIconArt{top:78px;width:150px;height:150px}
+  .shieldAwardText{top:238px;font-size:19px}
+  .shieldMonth{top:326px}
+  .shieldWinnerLabel{top:360px}
+  .shieldWinnerName{top:385px;font-size:27px}
+}
+
+
+/* Rewards shown after vote submission */
+.rewardGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0}
+.rewardCard{border:1px solid rgba(255,209,102,.35);background:linear-gradient(145deg,rgba(255,209,102,.12),rgba(94,231,255,.08));border-radius:20px;padding:14px;text-align:center;box-shadow:inset 0 0 20px rgba(255,255,255,.04)}
+.rewardIcon{font-size:34px;margin-bottom:8px}.rewardCard b{display:block;color:#fff4c8;margin-bottom:5px}.rewardCard p{font-size:13px;margin:0}
+
+</style>
+</head>
+<body>
+<div class="aurora"></div>
+<div class="wrap" id="app">
+<div class="siteTitle noPrint"><div class="expeditionLine">45th ISEA</div><h1>STARS OF BHARATI</h1><h2>Monthly Voting Portal</h2></div>
+<header class="header noPrint"><div class="card"><div class="kicker">Step 1 starts below</div><h2>Welcome to the 45th ISEA Stars of Bharati Awards</h2><p>Login, solve the monthly puzzle, vote anonymously, and appreciate the people who keep Bharati strong through teamwork, humour, discipline, and care.</p><div class="gallery"><div class="galleryMain"><img src="photos/group_main.jpeg" onclick="openGalleryPhoto(this.src)" onerror="this.remove()"><div class="galleryCaption">Bharati Winter Team • One station, one family</div></div><div class="grid"><div class="gallerySmall"><img src="photos/group_fun_1.jpeg" onclick="openGalleryPhoto(this.src)" onerror="this.remove()"></div><div class="gallerySmall"><img src="photos/gallery_04_station.jpeg" onclick="openGalleryPhoto(this.src)" onerror="this.remove()"></div></div></div><div class="kicker" style="margin-top:16px">Bharati Photo Gallery</div><div class="photoGallery" id="photoGallery"></div></div><div class="card"><div class="kicker">Hall of Fame</div><h2>Last Month’s Winners</h2><div class="hof"><b>🌌 Auroral Spirit:</b> To be updated</div><div class="hof"><b>🧱 Iron Pillar:</b> To be updated</div><div class="hof"><b>🛡️ Sentinel of Bharati:</b> To be updated</div><p>This corner can be updated every month after final leader/admin approval.</p><div style="margin-top:18px"><div class="kicker">Live Trend</div><h2 style="font-size:22px">Current Voting Trend</h2><p><b>Not final results.</b> Final review remains under Station Leader/Admin.</p><div class="rank" id="topRanks"></div></div></div></header>
+<div class="bigFact noPrint"><span id="factsLine"></span></div>
+<main class="grid grid2 noPrint" style="margin-top:18px"><section class="card" id="mainStage"></section><aside class="card"><div class="kicker">Bharati Family</div><h2>Meet the 45th ISEA Team</h2><p>Hover or touch here to pause and enjoy each member’s role, photo, and punch line.</p><div class="memberRail" id="memberRail"></div></aside></main>
+<section class="card hidden noPrint" id="adminPanel" style="margin-top:18px"></section><section class="printable hidden" id="certificatePanel"></section><div class="noPrint" style="text-align:center;margin-top:20px"><button class="secondary" onclick="showAdminLogin()">Leader/Admin Login</button></div><div class="footer noPrint">Website by Varun, Station Leader 45ISEA</div></div>
+<div id="photoModal" class="photoModal"><button class="modalClose" onclick="closePhoto()">Close ✕</button><button class="modalPrev" onclick="event.stopPropagation();prevPhoto()">‹ Prev</button><img id="photoModalImg" src="" onclick="event.stopPropagation()"><button class="modalNext" onclick="event.stopPropagation();nextPhoto()">Next ›</button></div>
+<script>
+const members=[{"id": 1, "name": "Varun Dongre", "mobile": "9833670527", "pin": "Q7M2", "role": "Station Leader", "tagline": "Leadership at the edge of the world isn't about being in charge; it's about being the one who stays calm when the world turns white.", "photo": "photos/varun_dongre.jpeg", "eligible": false}, {"id": 2, "name": "Dr.Siddharth", "mobile": "9676447936", "pin": "L9X4", "role": "Surgeon", "tagline": "I’m the only one allowed to open you up to see if you actually have a heart.", "photo": "photos/siddharth_reddy.jpeg", "eligible": true}, {"id": 3, "name": "Dr. Pratiksha Sutar", "mobile": "7507402597", "pin": "T3K8", "role": "Anesthesiologist", "tagline": "I don't just let people fall asleep; I’m the one who makes sure they come back, too.", "photo": "photos/pratiksha_sutar.jpeg", "eligible": true}, {"id": 4, "name": "Prateek Zambre", "mobile": "9503977020", "pin": "R6P1", "role": "BMS Engineer", "tagline": "I own the atmosphere here. Cross me, and your room becomes a glacier.", "photo": "photos/prateek_zambre.jpeg", "eligible": true}, {"id": 5, "name": "RC Kumar", "mobile": "9003089736", "pin": "N5V7", "role": "Crane Operator", "tagline": "I have the power to put your room on the roof. Be nice and gentle.", "photo": "photos/rc_kumar.jpeg", "eligible": true}, {"id": 6, "name": "Satyam Singh Rajawat", "mobile": "7047247381", "pin": "H2D9", "role": "Chief Engineer", "tagline": "I keep the station alive. Don't make me choose between it and you.", "photo": "photos/satyam_singh_rajawat.jpeg", "eligible": true}, {"id": 7, "name": "Sreekumar KN", "mobile": "9497602929", "pin": "Z8C3", "role": "Radio Operator", "tagline": "Bharati Radio: Making sure your 'Hello' doesn't turn into a 'Goodbye'.", "photo": "photos/sreekumar_kn.jpeg", "eligible": true}, {"id": 8, "name": "Saurabh Gaur", "mobile": "9756026383", "pin": "A4W6", "role": "NRSC(ISRO)", "tagline": "I transfer only laughter as satellites transfer value to Earth.", "photo": "photos/saurabh_gaur.jpeg", "eligible": true}, {"id": 9, "name": "Subrat Mondal", "mobile": "9641710287", "pin": "F7B2", "role": "NRSC (ISRO)", "tagline": "Decoding the satellite from the edge of the world.", "photo": "photos/subrat_mondal.jpeg", "eligible": true}, {"id": 10, "name": "Anu George", "mobile": "9846534365", "pin": "M3Y9", "role": "Meteorologist(IMD)", "tagline": "I don't predict the weather; I define the window of survival.", "photo": "photos/anu_george.jpeg", "eligible": true}, {"id": 11, "name": "Aarti Gupta", "mobile": "7979083298", "pin": "K8J5", "role": "Meteorologist(IMD)", "tagline": "The wind is my data set. I tell you when it’s safe to breathe.", "photo": "photos/aarti_gupta.jpeg", "eligible": true}, {"id": 12, "name": "Shivkumar Dharashive", "mobile": "9595243335", "pin": "P2S6", "role": "Chemical Engineer", "tagline": "I turn Antarctic slush into your glasses and any spite into hydration.", "photo": "photos/shivkumar_dharashive.jpeg", "eligible": true}, {"id": 13, "name": "Kunal Chavan", "mobile": "8788381501", "pin": "D9L3", "role": "Electrical Engineer", "tagline": "Touching my wires is the fastest way to meet the Surgeon.", "photo": "photos/kunal_chanvan.jpeg", "eligible": true}, {"id": 14, "name": "Shubham Kumar", "mobile": "8350936996", "pin": "W5Q8", "role": "Vehicle Mechanic", "tagline": "I perform CPR on engines that have been legally dead since June.", "photo": "photos/shubham_kumar.jpeg", "eligible": true}, {"id": 15, "name": "V Reddy", "mobile": "9010476264", "pin": "C4R7", "role": "NRSC(ISRO)", "tagline": "Monitoring the sky and station. If anyone blinks, I’m the first to know.", "photo": "photos/v_reddy.jpeg", "eligible": true}, {"id": 16, "name": "Vedant Raj", "mobile": "9925832187", "pin": "Y6T1", "role": "SAC(ISRO)", "tagline": "Satellites don't care about the cold. Neither do I.", "photo": "photos/vedant_raj.jpeg", "eligible": true}, {"id": 17, "name": "Yashpal Singh", "mobile": "9917976052", "pin": "V8N4", "role": "Workshop Commander", "tagline": "I let you move in this ice. Stopping is not an option in my shop.", "photo": "photos/yashpal_singh.jpeg", "eligible": true}, {"id": 18, "name": "Radheshyam Dhanka", "mobile": "7701843008", "pin": "G2X7", "role": "Vehicle Electrician", "tagline": "Chasing short circuits in a blizzard—because I love a challenge.", "photo": "photos/radheshyam_dhanka.jpeg", "eligible": true}, {"id": 19, "name": "Bhupesh Tiwari", "mobile": "8414052163", "pin": "S9A5", "role": "OEM", "tagline": "I move mountains. Well, frozen ones. Get out of the way.", "photo": "photos/bhupesh_tiwari.jpeg", "eligible": true}, {"id": 20, "name": "Ken Abraham", "mobile": "8289838506", "pin": "J4H8", "role": "Mechanical Engineer", "tagline": "The only thing louder than the wind is my generator.", "photo": "photos/ken_abraham.jpeg", "eligible": true}, {"id": 21, "name": "Ranjeet Singh Amakcham", "mobile": "9073173960", "pin": "B6K2", "role": "Male Nurse", "tagline": "Frontline stabilization. I’m the difference between a minor scratch and a medevac.", "photo": "photos/ranjeet_singh_amakcham.jpeg", "eligible": true}, {"id": 22, "name": "Shailesh Yadav", "mobile": "9967137907", "pin": "E3P9", "role": "Scientific Assistant", "tagline": "I’m the one who actually goes outside while they look at screens.", "photo": "photos/shailesh_yadav.jpeg", "eligible": true}, {"id": 23, "name": "Maria Shubin Thadeus", "mobile": "8903592300", "pin": "U7D5", "role": "Inventory Manager", "tagline": "I have everything you need, but I need a peaceful talk and wine in my hand first.", "photo": "photos/maria_shubin_thadeus.jpeg", "eligible": true}, {"id": 24, "name": "Rakesh Singh", "mobile": "9096074118", "pin": "X2M6", "role": "Chef", "tagline": "I’m the reason the crew doesn't revolt. Respect my apron.", "photo": "photos/rakesh_singh.jpeg", "eligible": true}, {"id": 99, "name": "Guest Visitor", "mobile": "0000000000", "pin": "GUEST45", "role": "Guest Login", "tagline": "Guest access for viewing and testing the Stars of Bharati portal.", "photo": "photos/guest_visitor.jpeg", "eligible": false}];
+const awards=[{"key": "aurora", "name": "The Auroral Spirit Award", "icon": "🌌", "tagline": "For being the light in the Antarctic night.", "voteHint": "Vote for the person who maintains high morale despite the darkness, uses humor to diffuse tension, and consistently checks in on the well-being of others.", "certLead": "for maintaining an unwavering positive attitude and fueling the spirit of the 45th ISEA during the winter of 2026 at Bharati Station, Antarctica. Your presence is the station’s true warmth in this harshest climate on Earth."}, {"key": "pillar", "name": "The Iron Pillar Award", "icon": "🧱", "tagline": "The strength behind the mission.", "voteHint": "Vote for the member who went above and beyond their job description to assist another department or saved a critical project through their brilliance.", "certLead": "for exceptional mission support. Your leadership skill and selfless assistance ensured that the gears of Bharati never stopped turning in any condition. You are the foundation of this expedition."}, {"key": "sentinel", "name": "The Sentinel of Bharati Award", "icon": "🛡️", "tagline": "For the hands that hold the station together.", "voteHint": "Vote for the person who takes initiative in common areas—keeping the lounge clean, assisting with food prep/service without being asked, or organizing community events.", "certLead": "for exemplary community service and Gally excellence. By making our station feel like a home, you have made the impossible, possible."}];
+const facts=["Antarctica is the coldest, driest, highest, and windiest continent on Earth.", "Antarctica contains roughly 90% of Earth’s ice and most of the planet’s fresh water locked as ice.", "Antarctica is a desert because it receives very little precipitation despite being covered with ice.", "KATABATIC winds flow downhill from the ice sheet and can become extremely powerful near the coast.", "A WHITEOUT can make the ground, sky, and HORIZON merge into one blank field of white.", "During Antarctic winter, MORALE is not a luxury; it becomes part of operational safety.", "Auroras occur when charged particles from space interact with Earth’s magnetic field and upper atmosphere.", "The ANTARCTIC TREATY keeps Antarctica dedicated to peace and science.", "Hidden CREVASSES can be dangerous because a snow bridge may look solid from above.", "Kitchen and community spaces often become the emotional heart of an isolated station.", "Every winter-over member becomes part of the living history of the station.", "Bharati Station represents India’s year-round scientific presence in East Antarctica.", "GPS satellites carry ATOMIC CLOCKS, and precise timing is the foundation of position calculation.", "A GPS receiver estimates position by measuring how long satellite signals take to arrive.", "At least FOUR GPS satellites are normally needed to calculate latitude, longitude, altitude, and receiver clock error.", "GPS works in Antarctica, but accuracy can still be affected by antenna view, MULTIPATH reflection, weather exposure, and user handling.", "GPS coordinates are based on a global reference system, commonly WGS84.", "LONGITUDE lines come closer together near the poles, so one degree of longitude covers less distance in Antarctica than near the equator.", "LATITUDE measures north-south position; longitude measures east-west position.", "One degree of latitude is roughly 111 kilometers anywhere on Earth.", "Magnetic compasses can be unreliable near polar regions because magnetic field direction and inclination behave differently than at lower latitudes.", "Earth’s magnetic field shields the planet from much of the SOLAR WIND.", "Space weather begins at the Sun and can affect satellites, radio communication, GPS accuracy, and power systems.", "A coronal mass ejection (CME) is a huge burst of solar plasma and magnetic field from the Sun.", "GEOMAGNETIC STORMS happen when solar activity disturbs Earth’s magnetosphere.", "Auroras are commonly called the Southern Lights in Antarctica and the Northern Lights in the Arctic.", "The scientific name for the Southern Lights is Aurora AUSTRALIS.", "Aurora colors depend on atmospheric gases and altitude; oxygen often produces green and red light.", "NITROGEN in the upper atmosphere can produce purple, blue, or pink auroral colors.", "Auroras often form oval-shaped regions around Earth’s magnetic poles.", "Antarctica is an excellent place for observing space weather effects because it lies close to the auroral zone.", "IONOSPHERIC DISTURBANCES can affect HF radio communication and GPS signal propagation.", "The IONOSPHERE is a layer of charged particles high in the atmosphere.", "HF radio can travel beyond the horizon by reflecting or refracting through the ionosphere.", "VHF and UHF radios usually need line of sight because they do not normally reflect from the ionosphere like HF.", "Satellite internet depends on clear signal paths, power, alignment, and weather-resistant ground equipment.", "Low Earth orbit(LEO) satellites move fast across the sky and require handover from one satellite to another.", "Weather forecasting in Antarctica is difficult because small changes in wind, pressure, and temperature can strongly affect local conditions.", "BLIZZARDS reduce visibility mainly through blowing snow, even when new snowfall is limited.", "WIND CHILL describes how cold the air feels on exposed skin because wind removes body heat faster.", "SEA ICE is frozen ocean water; SHELF ICE is thick ice floating from the land-based ice sheet.", "Ice shelves can move, crack, and develop crevasses over time.", "CREVASSES are cracks in glacier or ice shelf surfaces and may be hidden under SNOW BRIDGES.", "A safe route in Antarctica must be assessed repeatedly because ice conditions change with movement, weather, and temperature.", "SNOW BRIDGES can look strong but may collapse under vehicle or human load.", "Antarctic field travel depends on route marking, communication, weather checks, and emergency planning.", "Polar night can affect sleep, mood, motivation, and teamwork.", "Regular routines help winter-over teams maintain psychological stability.", "Humor, patience, and respectful communication are powerful survival tools during isolation.", "A good leader in Antarctica manages both technical risk and human morale.", "Small acts of help can feel very large during long isolation.", "Station CLEANLINESS is not only about comfort; it supports safety, hygiene, and morale.", "Waste management in Antarctica is guided by strict environmental responsibility.", "Fuel handling in Antarctica requires prevention, monitoring, spill readiness, and disciplined procedures.", "Water production at remote stations depends on engineering systems, treatment, storage, and careful monitoring.", "Power GENERATORS  are one of the most critical life-support systems at a polar station.", "REDUNDANCY means keeping backup systems ready before the main system fails.", "Remote Antarctic stations depend on teamwork across science, engineering, logistics, medicine, communication, weather, and kitchen support.", "The SOUTHERN OCEAN strongly influences global climate by moving heat, carbon, and nutrients around the planet.", "Antarctic ice cores preserve ancient air bubbles that help scientists study past climates.", "Antarctica helps scientists understand climate change, sea level rise, atmospheric chemistry, geology, biology, and space weather.", "Penguins are adapted for swimming, not flying.", "Emperor penguins breed during the Antarctic winter, one of the harshest breeding environments on Earth.", "Antarctic wildlife survives through adaptation to cold, wind, darkness, and limited food.", "Antarctica has no permanent native human population.", "The ANTARCTIC TREATY System makes Antarctica a symbol of international scientific cooperation.", "Team spirit in Antarctica is not just emotional; it is operational strength.", "Diesel generators in Antarctica are life-support machines, not just power sources.", "Cold starts are difficult because lubricants thicken and BATTERIES lose capacity.", "Hydraulic systems can become sluggish in extreme cold.", "TRACKED VEHICLES spread weight over snow and reduce sinking compared to wheels.", "Vehicle maintenance in Antarctica requires planning because every repair happens far from normal supply chains.", "Medical care in Antarctica depends on prevention, early reporting, and practical improvisation.", "Minor injuries can become major concerns in isolation if not treated early.", "Frostbite risk increases when cold temperature combines with wind and exposed skin.", "HYPOTHERMIA affects judgment, movement, and survival decision-making.", "Station hygiene helps prevent illness spreading quickly in closed winter environments.", "METEOROLOGY is the science of weather; metrology is the science of measurement.", "Barometric pressure trends help identify changing weather systems.", "ANEMOMETERS measure wind speed and WIND VANES measure wind direction.", "Cloud type, wind direction, pressure trend, and visibility are important in Antarctic forecasting.", "WEATHER WINDOWS are operational lifelines for flights, cargo and field movement.", "Fuel systems in cold regions need heating, monitoring and disciplined handling.", "Spill response readiness is part of environmental protection in Antarctica.", "REVERSE OSMOSIS is commonly used to produce freshwater from seawater.", "Fire safety is critical because evacuation options are limited during winter.", "REDUNDANCY in power, heating, communication and water systems is essential in polar stations."];
+const galleryImages=["photos/WhatsApp Image 2026-04-24 at 5.06.29 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.06.30 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.06.31 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.06.32 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.24.42 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.19 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.26 PM (1).jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.26 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.27 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.32 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.33 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.34 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.42 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.43 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.44 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.45 PM (1).jpeg", "photos/WhatsApp Image 2026-04-24 at 5.25.45 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.37.42 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.38.56 PM (1).jpeg", "photos/WhatsApp Image 2026-04-24 at 5.38.56 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.38.57 PM (1).jpeg", "photos/WhatsApp Image 2026-04-24 at 5.38.57 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.38.58 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.38.59 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.00 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.01 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.02 PM (1).jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.02 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.04 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.05 PM (1).jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.05 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.06 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.07 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.08 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.37 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.38 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.45 PM (1).jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.45 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.46 PM (1).jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.46 PM.jpeg", "photos/WhatsApp Image 2026-04-24 at 5.39.47 PM.jpeg", "photos/bharati_station.jpeg", "photos/gallery_01_station.jpeg", "photos/gallery_02_station.jpeg", "photos/gallery_03_station.jpeg", "photos/gallery_04_station.jpeg", "photos/gallery_05_station.jpeg", "photos/gallery_06_station.jpeg", "photos/gallery_07_station.jpeg", "photos/gallery_08_station.jpeg", "photos/gallery_09_station.jpeg", "photos/gallery_10_station.jpeg", "photos/gallery_12_station.jpeg", "photos/gallery_13_station.jpeg", "photos/gallery_14_station.jpeg", "photos/gallery_15_station.jpeg", "photos/gallery_16_station.jpeg", "photos/gallery_17_station.jpeg", "photos/gallery_18_station.jpeg", "photos/gallery_19_station.jpeg", "photos/gallery_20_station.jpeg", "photos/gallery_21_station.jpeg", "photos/gallery_22_station.jpeg", "photos/gallery_23_station.jpeg", "photos/gallery_24_station.jpeg", "photos/gallery_25_station.jpeg", "photos/gallery_26_station.jpeg", "photos/gallery_27_station.jpeg", "photos/gallery_28_station.jpeg", "photos/gallery_29_station.jpeg", "photos/gallery_30_station.jpeg", "photos/gallery_31_station.jpeg", "photos/gallery_32_station.jpeg", "photos/group_fun_1.jpeg", "photos/group_main.jpeg"];
+const puzzleBank=[{"q": "Login Puzzle: Which Antarctic light display is scientifically called Southern Lights?", "a": "AURORA", "hint": "Think of glowing curtains in the polar sky."}, {"q": "Login Puzzle: What is the 9-letter second word for southern light?", "a": "AUSTRALIS", "hint": "Think of the Latin-style name used for the southern polar lights."}, {"q": "Login Puzzle: In a whiteout, which visual reference disappears between land and sky?", "a": "HORIZON", "hint": "Separates sky and ground."}, {"q": "Login Puzzle: Which navigation system uses satellites and precise timing?", "a": "GPS", "hint": "All mobile usses it for navigation of google map."}, {"q": "Login Puzzle: How many GPS satellites are normally needed for 3D position plus clock correction?", "a": "FOUR", "hint": "Minimu 3 satellite is required for positional accuracy"}, {"q": "Login Puzzle: What global reference system is commonly used for GPS coordinates?", "a": "WGS84", "hint": "Three letters and two numbers."}, {"q": "Login Puzzle: Which atmospheric layer affects HF radio and GPS signals?", "a": "IONOSPHERE", "hint": "The most charged layer of atmosphere."}, {"q": "Login Puzzle: Which radio band can communicate beyond line of sight using the ionosphere?", "a": "HF", "hint": "Two letters."}, {"q": "Login Puzzle: Which radio type usually needs line of sight: VHF or HF?", "a": "VHF", "hint": "Handheld radios often use it."}, {"q": "Login Puzzle: What is charged-particle stream called from the Sun that causes space weather effects?", "a": "SOLAR WIND", "hint": "Two words."}, {"q": "Login Puzzle: What event is a huge burst of plasma and magnetic field from the Sun?", "a": "CME", "hint": "It creates sun spots."}, {"q": "Login Puzzle: Which field shields Earth from much of the solar wind?", "a": "MAGNETIC FIELD", "hint": "Earth has one."}, {"q": "Login Puzzle: What storm disturbs Earth’s magnetosphere after solar activity?", "a": "GEOMAGNETIC STORM", "hint": "it creates auroras."}, {"q": "Login Puzzle: What color is often produced by oxygen in auroras?", "a": "GREEN", "hint": "Think of the colour most often seen in aurora photographs."}, {"q": "Login Puzzle: Which gas can produce purple or pink auroral colors?", "a": "NITROGEN", "hint": "Think of the gas that makes up most of the air around us."}, {"q": "Login Puzzle: Which Antartic station recorded the leaste temperature ever oin earth?", "a": "VOSTOK (-89.6C)", "hint": "Russian station near south pole."}, {"q": "Login Puzzle: What type of wind flows downhill from the ice sheet?", "a": "KATABATIC", "hint": "Think of cold air flowing down from the ice sheet."}, {"q": "Login Puzzle: What frozen ocean water surrounds Antarctica seasonally?", "a": "SEA ICE", "hint": "Think of frozen ocean water."}, {"q": "Login Puzzle: What floating extension of land ice can crack and move?", "a": "ICE SHELF", "hint": "Progress airport is made on that."}, {"q": "Login Puzzle: What hidden cracks in ice are dangerous during field travel?", "a": "CREVASSES", "hint": "A huge crack in ice shelf."}, {"q": "Login Puzzle: What weak snow-covered feature may hide a crevasse?", "a": "SNOW BRIDGE", "hint": "Snow accumulation over crevasses."}, {"q": "Login Puzzle: What visibility condition makes everything appear white?", "a": "WHITEOUT", "hint": "Think of a visibility or ice-surface danger in Antarctic movement."}, {"q": "Login Puzzle: What index describes how cold moving air feels on skin?", "a": "WIND CHILL", "hint": "chilling effect due to wind."}, {"q": "Login Puzzle: What treaty keeps Antarctica for peace and science?", "a": "ANTARCTIC TREATY", "hint": "Every antarctic station is bound with this."}, {"q": "Login Puzzle: Which Indian Antarctic station is this voting portal for?", "a": "BHARATI", "hint": "Your station."}, {"q": "Login Puzzle: Which station system keeps rooms warm and air controlled?", "a": "AHU", "hint": "Fresh air intake and outlet system in Bharati."}, {"q": "Login Puzzle: Which system monitors alarms, power, and building services?", "a": "BMS", "hint": "Every gally readinng starts with this screen."}, {"q": "Login Puzzle: Which machine clears snow and moves on tracks in Antarctica?", "a": "PISTENBULLY", "hint": "PB full name."}, {"q": "Login Puzzle: Which heavy machine is used for snow moving and towing support?", "a": "DOZER", "hint": "Think of the heavy machine commonly used for snow and towing support."}, {"q": "Login Puzzle: Which workshop role keeps vehicles alive in cold conditions?", "a": "MECHANIC", "hint": "Vehicle doctor."}, {"q": "Login Puzzle: Which system provides electricity for station life support?", "a": "GENERTAOR", "hint": "Think of the station’s electrical lifeline."}, {"q": "Login Puzzle: What engineering principle means keeping backups ready?", "a": "REDUNDANCY", "hint": "Think of backup readiness before failure occurs."}, {"q": "Login Puzzle: Which device converts seawater to fresh water at stations?", "a": "RO", "hint": "Two letters."}, {"q": "Login Puzzle: What is RO full form?", "a": "REVERSE OSMOSIS", "hint": "Think of seawater being forced through a membrane."}, {"q": "Login Puzzle: What protects cold-region pipelines from freezing?", "a": "HEAT TRACING", "hint": "Heated wire wounded on pipes."}, {"q": "Login Puzzle: What kit is used for quick response to fuel spills?", "a": "SPILL KIT", "hint": "Feul collection kit during spillage."}, {"q": "Login Puzzle: Which science forecasts weather windows for safe operations?", "a": "METEOROLOGY", "hint": "Think of the field that studies wind, clouds, pressure and forecasts."}, {"q": "Login Puzzle: What instrument measures wind direction?", "a": "WIND VANE", "hint": "Two words starts with w."}, {"q": "Login Puzzle: What instrument measures wind speed?", "a": "ANEMOMETER", "hint": "-----meter."}, {"q": "Login Puzzle: What instrument measures air pressure?", "a": "BAROMETER", "hint": "----meter."}, {"q": "Login Puzzle: Which weather condition limits flight and field visibility?", "a": "BLIZZARD", "hint": "Think of the weather condition that makes visibility and movement difficult."}, {"q": "Login Puzzle: What term means a safe time gap for flying or field activity?", "a": "WEATHER WINDOW", "hint": "Two words starts with W."}, {"q": "Login Puzzle: What cold injury affects skin and tissue?", "a": "FROSTBITE", "hint": "Think of freezing damage to skin and tissue."}, {"q": "Login Puzzle: What whole-body cold emergency can be life-threatening?", "a": "HYPOTHERMIA", "hint": "Think of dangerous whole-body heat loss."}, {"q": "Login Puzzle: Which room supports emergency treatment and station health?", "a": "MEDICAL ROOM", "hint": "where treatment can be done."}, {"q": "Login Puzzle: What psychological challenge is linked with isolation and darkness?", "a": "WINTER OVER SYNDROME", "hint": "Think of the full phrase used in polar winter psychology (3 words W--O--S--)."}, {"q": "Login Puzzle: Which quality prevents small conflicts from growing in winter?", "a": "PATIENCE", "hint": "Leadership virtue."}, {"q": "Login Puzzle: What daily habit supports hygiene and morale at station?", "a": "CLEANLINESS", "hint": "Station community duty is for"}, {"q": "Login Puzzle: What area often becomes the emotional heart of a station?", "a": "Lounge", "hint": "where we have parties."},  {"q": "Login Puzzle: Which satellite orbit type moves fast across the sky?", "a": "LEO", "hint": "Think of the common technical abbreviation used in operations."}, {"q": "Login Puzzle: What causes GPS error when signals bounce from surfaces?", "a": "MULTIPATH", "hint": "Starts with M."}, {"q": "Login Puzzle: Which clock type helps GPS satellites keep precise time?", "a": "ATOMIC CLOCK", "hint": "Most accurate clock ever made."}, {"q": "Login Puzzle: In coordinates, what measures north-south position?", "a": "LATITUDE", "hint": "Starts with L."}, {"q": "Login Puzzle: In coordinates, what measures east-west position?", "a": "LONGITUDE", "hint": "Starts with L."}, {"q": "Login Puzzle: Roughly how many kilometers is one degree of latitude?", "a": "111", "hint": "Approximate kilometre value used for one degree of latitude."}, {"q": "Login Puzzle: Which science studies Earth’s magnetic field?", "a": "GEOMAGNETISM", "hint": "Think of Earth’s magnetic field science."}, {"q": "Login Puzzle: Which disturbance can affect radio communication?", "a": "IONOSPHERIC DISTURBANCE", "hint": "charg particles get absorbed at this."}, {"q": "Login Puzzle: Which system must stay alive for heating, water, communication and safety?", "a": "POWER SYSTEM", "hint": "Generators are used to generate."}, {"q": "Login Puzzle: What protects equipment and people during electrical faults?", "a": "EARTHING", "hint": "Earth is considered as low potential"}, {"q": "Login Puzzle: Which system detects smoke or fire early?", "a": "FIRE SYSTEM", "hint": "siren is made by this system during fire hazard."}, {"q": "Login Puzzle: Which gas may be used for inerting and is also linked to aurora colors?", "a": "NITROGEN", "hint": "Think of a common atmospheric gas also linked with auroral colours."}, {"q": "Login Puzzle: What activity reduces risk before field movement?", "a": "ROUTE ASSESSMENT", "hint": "R---A--."}, {"q": "Login Puzzle: What markers can guide safe travel routes?", "a": "FLAGS", "hint": "Think of visual markers used on snow routes."}, {"q": "Login Puzzle: Which vehicle type spreads load over snow?", "a": "TRACKED VEHICLE", "hint": "PBs are such vehicle."}, {"q": "Login Puzzle: Which member supports meals and morale?", "a": "Chef", "hint": "Who doesnt have gally duty."}, {"q": "Login Puzzle: Which Indian organization supports satellite operations?", "a": "ISRO", "hint": "Indian space agency."}, {"q": "Login Puzzle: Which weather department is represented by meteorologists?", "a": "IMD", "hint": "Indian weather Agency."}, {"q": "Login Puzzle: What is medical evacuation often shortened to?", "a": "MEDEVAC", "hint": "Think of the shortened term for emergency patient transport."}, {"q": "Login Puzzle: What essential resource must be conserved along with power and fuel?", "a": "WATER", "hint": "Think of something produced, treated and conserved at station."}, {"q": "Login Puzzle: What is the science of weather called?", "a": "METEOROLOGY", "hint": "This field studies weather, clouds, wind and pressure."}, {"q": "Login Puzzle: What is the science of measurement called?", "a": "METROLOGY", "hint": "This field studies measurement standards and accuracy."}, {"q": "Login Puzzle: Which one studies weather: meteorology or metrology?", "a": "METEOROLOGY", "hint": "Think of the field that studies wind, clouds, pressure and forecasts."}, {"q": "Login Puzzle: Which one studies measurement standards?", "a": "METROLOGY", "hint": "Think of standards, calibration and accuracy."}, {"q": "Login Puzzle: What is the main risk from carbon monoxide exposure?", "a": "POISONING", "hint": "Think of an invisible gas hazard.1 Words starts with P"}, {"q": "Login Puzzle: What emergency item fights small fires?", "a": "FIRE EXTINGUISHER", "hint": "we spray it on fire."}, {"q": "Login Puzzle: What practice protects Antarctica from mixed waste pollution?", "a": "WASTE SEGREGATION", "hint": "we do it by having different kiinds of dustbins."}, {"q": "Login Puzzle: What do ice cores preserve for climate studies?", "a": "AIR BUBBLES", "hint": "Think of what ancient ice preserves from the atmosphere."}, {"q": "Login Puzzle: Which ocean surrounds Antarctica?", "a": "SOUTHERN OCEAN", "hint": "S---O----."}, {"q": "Login Puzzle: Which penguin breeds during Antarctic winter?", "a": "EMPEROR PENGUIN", "hint": "Think of the penguin named after a ruler."}, {"q": "Login Puzzle: What do penguins use better than wings for swimming?", "a": "FLIPPERS", "hint": "Penguins use these for underwater movement."}, {"q": "Login Puzzle: What human factor is operationally important in isolation?", "a": "MORALE", "hint": "Think of emotional strength during isolation."}, {"q": "Login Puzzle: What solves more problems in winter than conflict?", "a": "COOPERATION", "hint": "Think of people solving problems together."}, {"q": "Login Puzzle: Which quality means helping without being asked?", "a": "INITIATIVE", "hint": "Think of a helpful action started by own."}, {"q": "Login Puzzle: In whiteout, what is safer than blind movement?", "a": "STOPPING", "hint": "In poor visibility, stopping can be safer than moving blindly."}, {"q": "Login Puzzle: Which system means satellite communication?", "a": "SATCOM", "hint": "Think of the shortened operational term."}, {"q": "Login Puzzle: What platform relays communication from space?", "a": "SATELLITE", "hint": "Think of a machine in space relaying communication or data."}, {"q": "Login Puzzle: What makes batteries drain faster in Antarctica?", "a": "COLD", "hint": "Think of the environmental condition that drains batteries."}, {"q": "Login Puzzle: What clothing strategy protects against cold?", "a": "LAYERING", "hint": "Think of wearing several protective levels."}, {"q": "Login Puzzle: What condition is created by blowing snow and strong wind?", "a": "BLIZZARD", "hint": "severe snow-wind condition."}, {"q": "Login Puzzle: What attitude is essential before field travel?", "a": "PREPAREDNESS", "hint": "Think of readiness before field travel."}, {"q": "Login Puzzle: What is the core value of Stars of Bharati awards?", "a": "APPRECIATION", "hint": "Think of honouring good behaviour and contribution."},{"q": "Login Puzzle: What should be checked before starting vehicles in extreme cold?", "a": "ENGINE OIL", "hint": "Think of the liquids checked before operating machinery."}, {"q": "Login Puzzle: What machine component loses efficiency in severe cold?", "a": "BATTERY", "hint": "Used for satrting the ignition."}, {"q": "Login Puzzle: What must be monitored to prevent generator overload?", "a": "LOAD", "hint": "Think of what must be watched to avoid generator overload."}, {"q": "Login Puzzle: What station area needs cleaning to maintain community morale?", "a": "LOUNGE", "hint": "Think of the shared relaxation space."}, {"q": "Login Puzzle: What medical habit is better than late treatment in Antarctica?", "a": "PREVENTION", "hint": "In Antarctica, avoiding illness is safer than treating it late."}, {"q": "Login Puzzle: Which team member tracks stores and supplies?", "a": "INVENTORY MANAGER", "hint": "who manages stocks."}, {"q": "Login Puzzle: What system removes wastewater contaminants?", "a": "SEWAGE TREATMENT", "hint": "S-----T----."}, {"q": "Login Puzzle: What is essential in emergencies: panic or calm?", "a": "CALM", "hint": "Think of steadiness during emergencies."}, {"q": "Login Puzzle: What helps prevent groupism in winter teams?", "a": "INCLUSION", "hint": "Being included"}];
+let currentLoginPuzzle=null;
+let puzzleTimer=null;
+let currentUser=null,stage="login",currentPhotoIndex=0,currentPhotoMode="gallery",draft={choices:{aurora:"",pillar:"",sentinel:""},remarks:{aurora:"",pillar:"",sentinel:""},solved:false};
+function getVotes(){
+ return JSON.parse(localStorage.getItem("bharatiVotesFixed")||"[]")
+}
+function saveVotes(v){
+ localStorage.setItem("bharatiVotesFixed",JSON.stringify(v))
+}
+async function loadAllVotes(){
+ try{
+   const res=await fetch("/api/votes",{cache:"no-store"});
+   if(res.ok){
+     const data=await res.json();
+     return Array.isArray(data)?data:(data.votes||[]);
+   }
+ }catch(e){}
+ return getVotes();
+}
+async function saveVoteToServer(vote){
+ try{
+   const res=await fetch("/api/submit-vote",{
+     method:"POST",
+     headers:{"Content-Type":"application/json"},
+     body:JSON.stringify(vote)
+   });
+   if(res.ok) return await res.json();
+ }catch(e){}
+ return null;
+}
+async function setVoteDisqualifiedOnServer(voteId,disqualified){
+ try{
+   const res=await fetch("/api/disqualify",{
+     method:"POST",
+     headers:{"Content-Type":"application/json"},
+     body:JSON.stringify({adminPin:"Bharat2026",voteId,disqualified})
+   });
+   if(res.ok) return true;
+ }catch(e){}
+ return false;
+}
+async function getServerAdminChoices(){
+ try{
+   const res=await fetch("/api/admin-choices",{cache:"no-store"});
+   if(res.ok) return await res.json();
+ }catch(e){}
+ return getAdminChoices();
+}
+async function setServerAdminChoice(awardKey,memberId){
+ try{
+   const res=await fetch("/api/admin-choice",{
+     method:"POST",
+     headers:{"Content-Type":"application/json"},
+     body:JSON.stringify({adminPin:"Bharat2026",awardKey,memberId})
+   });
+   if(res.ok) return true;
+ }catch(e){}
+ return false;
+}
+function getAdminChoices(){
+ return JSON.parse(localStorage.getItem("adminChoicesFixed")||"{}")
+}
+function saveAdminChoices(s){
+ localStorage.setItem("adminChoicesFixed",JSON.stringify(s))
+}
+/////
+async function clearVotesServer(){
+  await fetch("/api/clear-votes",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({adminPin:"Bharat2026"})
+  });
+}
+
+async function clearTriviaServer(){
+  await fetch("/api/clear-trivia",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({adminPin:"Bharat2026"})
+  });
+}
+
+////////
+function byId(id){return members.find(m=>String(m.id)===String(id))}function initials(n){return n.split(" ").map(x=>x[0]).join("").slice(0,2).toUpperCase()}function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]))}
+function memberImg(m,cls="avatar"){return `<img class="${cls}" src="${m.photo}" onclick="openMemberPhoto(${m.id});event.stopPropagation()" onerror="this.outerHTML='<div class=&quot;${cls}&quot;>${initials(m.name)}</div>'" alt="${esc(m.name)}">`}
+async function loadGalleryImages(){try{const res=await fetch("photos/");if(!res.ok)throw new Error();const txt=await res.text();const found=[...txt.matchAll(/href="([^"]+\.(?:jpg|jpeg|png|webp))"/gi)].map(m=>"photos/"+decodeURIComponent(m[1].split("/").pop())).filter(src=>/gallery_|whatsapp|group_|wildlife|station/i.test(src));if(found.length)return[...new Set(found)].reverse()}catch(e){}return galleryImages.slice().reverse()}
+async function renderGallery(){const el=document.getElementById("photoGallery");const imgs=await loadGalleryImages();window.__gallery=imgs;el.innerHTML=imgs.map((src,i)=>`<div class="photoThumb" onclick="openGalleryPhoto('${src}',${i})"><img src="${src}" onerror="this.closest('.photoThumb').remove()"></div>`).join("")}
+function openGalleryPhoto(src,index){currentPhotoMode="gallery";const list=window.__gallery||galleryImages;currentPhotoIndex=typeof index==="number"?index:Math.max(0,list.indexOf(src));document.getElementById("photoModalImg").src=src;document.getElementById("photoModal").classList.add("open")}function openMemberPhoto(id){currentPhotoMode="member";currentPhotoIndex=Math.max(0,members.findIndex(m=>m.id===id));document.getElementById("photoModalImg").src=members[currentPhotoIndex].photo;document.getElementById("photoModal").classList.add("open")}function activePhotoList(){return currentPhotoMode==="member"?members.map(m=>m.photo):(window.__gallery||galleryImages)}function showPhotoAt(i){const list=activePhotoList();if(!list.length)return;currentPhotoIndex=(i+list.length)%list.length;document.getElementById("photoModalImg").src=list[currentPhotoIndex]}function nextPhoto(){showPhotoAt(currentPhotoIndex+1)}function prevPhoto(){showPhotoAt(currentPhotoIndex-1)}function closePhoto(){document.getElementById("photoModal").classList.remove("open");document.getElementById("photoModalImg").src=""}
+
+async function loadAllVotes(){
+ try{
+   const res=await fetch("/api/votes",{cache:"no-store"});
+   if(res.ok){const data=await res.json();return Array.isArray(data)?data:(data.votes||[]);}
+ }catch(e){}
+ try{
+   const res=await fetch("votes.json?ts="+Date.now(),{cache:"no-store"});
+   if(res.ok){const data=await res.json();return Array.isArray(data)?data:(data.votes||[]);}
+ }catch(e){}
+ return getVotes();
+}
+async function findExistingVoteForUser(userId){
+ const votes=await loadAllVotes();
+ return votes.find(v=>String(v.voterId)===String(userId) && !v.disqualified);
+}
+
+
+function setupManualTeamScroll(){
+ const win=document.querySelector(".scrollWindow");
+ if(!win) return;
+ let t=null;
+ const pause=()=>{
+   win.classList.add("manualScroll");
+   clearTimeout(t);
+   t=setTimeout(()=>win.classList.remove("manualScroll"),3500);
+ };
+ win.addEventListener("wheel",pause,{passive:true});
+ win.addEventListener("touchstart",pause,{passive:true});
+ win.addEventListener("touchmove",pause,{passive:true});
+ win.addEventListener("scroll",pause,{passive:true});
+}
+
+function init(){document.getElementById("factsLine").textContent=facts.join("   ❄️   ");renderGallery();renderRail();setupManualTeamScroll();renderTop();renderStage()}
+function renderRail(){const leader=members.find(m=>m.id===1),rest=members.filter(m=>m.id!==1),list=[...rest,...rest];document.getElementById("memberRail").innerHTML=`${leader?`<div class="leaderFixed"><div class="memberMini" tabindex="0" onclick="zoomMember(this)">${memberImg(leader)}<div><b>${esc(leader.name)}</b><small>${esc(leader.role)}</small><p>“${esc(leader.tagline)}”</p></div></div></div>`:""}<div class="scrollWindow"><div class="memberTrack">`+list.map(m=>`<div class="memberMini" tabindex="0" onclick="zoomMember(this)">${memberImg(m)}<div><b>${esc(m.name)}</b><small>${esc(m.role)}</small><p>“${esc(m.tagline)}”</p></div></div>`).join("")+`</div></div>`}
+function zoomMember(el){el.classList.add("zoomed");const track=el.closest(".memberRail")?.querySelector(".memberTrack");if(track)track.style.animationPlayState="paused";clearTimeout(el._zoomTimer);el._zoomTimer=setTimeout(()=>{el.classList.remove("zoomed");if(track)track.style.animationPlayState=""},2200)}
+function loggedUserBox(){return currentUser?`<div class="stat" style="margin-bottom:14px"><b>Logged in: ${esc(currentUser.name)}</b><p>${esc(currentUser.role)} — your name is disabled to avoid self voting.</p></div>`:""}
+
+function pickLoginPuzzle(){
+ const p=puzzleBank[Math.floor(Math.random()*puzzleBank.length)];
+ currentLoginPuzzle=p;
+ const box=document.getElementById("puzzleText");
+ const ans=document.getElementById("puzzleInput");
+ const timer=document.getElementById("puzzleTimer");
+ if(box) box.textContent=p.q;
+ if(ans) ans.value="";
+ if(timer) timer.textContent="Puzzle changes every 50sec, See scrolling facts for answer.";
+}
+function startPuzzleRotation(){
+ clearInterval(puzzleTimer);
+ pickLoginPuzzle();
+ puzzleTimer=setInterval(pickLoginPuzzle,55000);
+}
+function stopPuzzleRotation(){
+ clearInterval(puzzleTimer);
+ puzzleTimer=null;
+}
+
+function renderStage(){
+ const el=document.getElementById("mainStage");
+ if(stage==="login")el.innerHTML=`<div class="kicker">Step 1</div><h2>Login</h2><p>Login with your name or mobile number and private PIN.</p><div class="notice" style="margin:10px 0"><b>Guest Demo Login:</b> Name/Mobile: <b>Guest Visitor</b> or <b>0000000000</b> &nbsp; | &nbsp; PIN: <b>GUEST45</b></div><input id="loginInput" placeholder="Enter name or mobile number"><input id="loginPin" placeholder="Enter private PIN" style="margin-top:10px" type="password"><button style="margin-top:12px" onclick="login()">Continue</button>`;
+ if(stage==="puzzle"){el.innerHTML=`${loggedUserBox()}<div class="kicker">Step 2</div><h2>Scrolling Facts Puzzle Unlock</h2><p id="puzzleText"></p><p id="puzzleTimer" class="notice"></p><input id="puzzleInput" placeholder="Enter puzzle answer"><button style="margin-top:12px" onclick="unlock()">Unlock Voting</button>`;startPuzzleRotation();}
+ if(stage==="rules")el.innerHTML=`${loggedUserBox()}<div class="kicker">Step 3</div><h2>Voting Rules</h2><div class="grid grid3"><div class="stat"><b>Three Award Categories</b><p>Select one different member for each award.</p></div><div class="stat"><b>No Self Voting</b><p>Your own name is disabled in every dropdown.</p></div><div class="stat"><b>Appreciation Required</b><p>For every selected nominee, write one appreciating line.</p></div></div><button class="green" style="margin-top:14px" onclick="stage='vote';renderStage()">I Understand — Start Voting</button>`;
+ if(stage==="vote")renderVoting(el);
+ if(stage==="submitted"){
+   el.innerHTML=`${loggedUserBox()}<div class="kicker">Submitted</div><h2>Thank you, ${esc(currentUser.name)}</h2><p>Your vote has been recorded privately.</p>${ownSummary()}
+<div class="card" style="box-shadow:none;margin-top:16px">
+  <div class="kicker">Winner Recognition</div>
+  <h2>What the winners may receive</h2>
+  <p>These recognitions are meant to celebrate good behaviour, teamwork, helpfulness and positive station spirit.</p>
+  <div class="rewardGrid">
+    <div class="rewardCard"><div class="rewardIcon">🛡️</div><b>Digital Winner Badge</b><p>Premium shareable digital badge for WhatsApp status and station memories.</p></div>
+    <div class="rewardCard"><div class="rewardIcon">📜</div><b>Certificate of Appreciation</b><p>Formal Printed certificate appreciation.</p></div>
+    <div class="rewardCard"><div class="rewardIcon">🎁</div><b>Surprise Gift</b><p>A small appreciation gift decided by the Station Leader.</p></div>
+    <div class="rewardCard"><div class="rewardIcon">🤝</div><b>Community Week Off</b><p>One week relief from selected community duties, subject to station safety and operational requirements.</p></div>
+  </div>
+</div>
+   <div class="card" style="box-shadow:none;margin-top:16px">
+     <div class="kicker">Antarctic Knowledge Base</div>
+     <h2>Funfacts Trivia Game</h2>
+     <p id="triviaQuestion">Click the button to get a curiosity question from the facts.</p>
+     <input id="triviaAnswer" placeholder="Type your answer here">
+     <div class="row" style="margin-top:10px">
+       <button class="secondary" onclick="newTrivia()">New Question</button>
+       <button class="green" onclick="checkTrivia()">Check Answer</button>
+     </div>
+     <p id="triviaResult"></p>
+     <div class="triviaScorePills"><span id="rightPill">Right: 0</span><span id="wrongPill">Wrong: 0</span><span id="accuracyPill">Accuracy: 0%</span><span id="remainingPill">Questions left: 0</span></div>
+     <div class="triviaBoard">
+       <table>
+         <thead><tr><th>Rank</th><th>Member</th><th>Right</th><th>Wrong</th><th>Accuracy</th></tr></thead>
+         <tbody id="triviaLeaderboard"><tr><td colspan="5">Loading leaderboard...</td></tr></tbody>
+       </table>
+     </div>
+   </div>
+   <button class="secondary" style="margin-top:12px" onclick="resetSession()">Logout</button>`;
+   setTimeout(()=>{initTriviaForUser();newTrivia();syncTriviaScore();renderTriviaLeaderboard();},50);
+ }
+}
+async function login(){
+ const val=document.getElementById("loginInput").value.trim().toLowerCase();
+ const pin=document.getElementById("loginPin").value.trim();
+ const user=members.find(m=>m.name.toLowerCase()===val||m.mobile===val);
+ if(!user){alert("Name/mobile not found.");return}
+ if(user.pin!==pin){alert("Wrong private PIN.");return}
+ currentUser=user;
+ const existing=await findExistingVoteForUser(user.id);
+ if(existing){
+   draft={choices:{...existing.choices},remarks:{...existing.remarks},solved:true};
+   stage="submitted";
+   renderStage();
+   renderTop();
+   return;
+ }
+ stage="puzzle";
+ draft={choices:{aurora:"",pillar:"",sentinel:""},remarks:{aurora:"",pillar:"",sentinel:""},solved:false};
+ renderStage();
+ renderTop();
+}
+function unlock(){
+ if(!currentLoginPuzzle) pickLoginPuzzle();
+ const val=document.getElementById("puzzleInput").value.trim().toUpperCase().replace(/[\s-]/g,"");
+ const ans=currentLoginPuzzle.a.toUpperCase().replace(/[\s-]/g,"");
+ if(val!==ans){
+   alert("Not correct yet. Hint: "+(currentLoginPuzzle.hint||"Read the facts carefully."));
+   return;
+ }
+ stopPuzzleRotation();
+ draft.solved=true;
+ stage="rules";
+ renderStage();
+}
+function options(selected="",awardKey=""){const used=awards.filter(a=>a.key!==awardKey).map(a=>String(draft.choices[a.key]||"")).filter(Boolean);return `<option value="">Select member</option>`+members.map(m=>{const isSelf=currentUser&&m.id===currentUser.id,isLeader=m.id===1,already=used.includes(String(m.id));const disabled=isSelf||isLeader||already?"disabled":"",sel=String(m.id)===String(selected)?"selected":"";let note=isLeader?" (Station Leader - not eligible)":isSelf?" (You - disabled)":already?" (Already selected in your form)":"";return `<option value="${m.id}" ${disabled} ${sel}>${esc(m.name)} — ${esc(m.role)}${note}</option>`}).join("")}
+function renderVoting(el){el.innerHTML=`${loggedUserBox()}<div class="kicker">Step 4</div><h2>Vote for Three Awards</h2><p>Choose one different member for each award in your own form. Other voters may select the same member. Write one appreciating line for every selected nominee.</p><div class="progress" style="margin-bottom:12px"><div id="voteProgressBar" style="width:${voteProgress()}%"></div></div><p id="voteProgressText">${voteProgress()}% completed</p><div class="grid">${awards.map(a=>`<div class="card award" style="box-shadow:none"><h3>${a.icon} ${a.name}</h3><p>${esc(a.voteHint)}</p><select onchange="setChoice('${a.key}',this.value)">${options(draft.choices[a.key],a.key)}</select><textarea placeholder="Write one appreciating line for this person" oninput="setRemark('${a.key}',this.value)">${esc(draft.remarks[a.key])}</textarea></div>`).join("")}</div><div class="notice" id="validationMsg" style="margin-top:18px">${validationMessage()}</div><div class="row" style="margin-top:14px"><button id="submitVoteBtn" class="green" ${canSubmit()?"":"disabled"} onclick="submitVote()">Submit Final Vote</button><button class="secondary" onclick="exportOwnCSV()">Export My Own Vote</button></div>`;updateVoteStatus()}
+function setChoice(k,v){draft.choices[k]=v;renderStage();renderTop()}function setRemark(k,v){draft.remarks[k]=v;updateVoteStatus()}function updateVoteStatus(){const pct=voteProgress(),bar=document.getElementById("voteProgressBar"),txt=document.getElementById("voteProgressText"),msg=document.getElementById("validationMsg"),btn=document.getElementById("submitVoteBtn");if(bar)bar.style.width=pct+"%";if(txt)txt.textContent=pct+"% completed";if(msg)msg.textContent=validationMessage();if(btn)btn.disabled=!canSubmit()}
+function voteProgress(){let done=0,total=6;awards.forEach(a=>{if(draft.choices[a.key])done++;if(String(draft.remarks[a.key]||"").trim())done++});return Math.round(done/total*100)}function canSubmit(){if(!currentUser||!draft.solved)return false;const ids=awards.map(a=>String(draft.choices[a.key]||"")).filter(Boolean);if(ids.length!==3||new Set(ids).size!==3)return false;if(!awards.every(a=>Number(draft.choices[a.key])!==currentUser.id&&Number(draft.choices[a.key])!==1))return false;if(!awards.every(a=>String(draft.remarks[a.key]||"").trim()))return false;return true}function validationMessage(){return canSubmit()?"All required tasks are complete. You may submit now.":"Submit button enables only after you select three different members in your own form and write one appreciation line for each. Other voters may select the same member."}
+async function submitVote(){
+ if(!canSubmit())return;
+ const voteRecord={
+   id:Date.now()+Math.floor(Math.random()*100000),
+   time:new Date().toISOString(),
+   voterId:currentUser.id,
+   voterName:currentUser.name,
+   choices:{...draft.choices},
+   remarks:{...draft.remarks},
+   disqualified:false
+ };
+
+ const saved=await saveVoteToServer(voteRecord);
+ if(!saved){
+   const votes=getVotes();
+   if(votes.some(v=>v.voterId===currentUser.id&&!v.disqualified)){
+     if(!confirm("A vote from this member already exists. Submit again as duplicate for admin review?"))return;
+   }
+   votes.push(voteRecord);
+   saveVotes(votes);
+ }
+
+ stage="submitted";
+ renderTop();
+ renderStage();
+}
+function score(){const totals={aurora:{},pillar:{},sentinel:{}};getVotes().filter(v=>!v.disqualified).forEach(v=>awards.forEach(a=>{const id=v.choices[a.key];if(id)totals[a.key][id]=(totals[a.key][id]||0)+1}));return totals}
+async function renderTop(){
+ const el=document.getElementById("topRanks");
+ if(!el)return;
+ const votes=await loadAllVotes();
+ const totals={aurora:{},pillar:{},sentinel:{}};
+ votes.filter(v=>!v.disqualified).forEach(v=>awards.forEach(a=>{
+   const id=v.choices?.[a.key];
+   if(id)totals[a.key][id]=(totals[a.key][id]||0)+1;
+ }));
+ el.innerHTML=awards.map(a=>{
+   const list=Object.entries(totals[a.key])
+     .map(([id,c])=>({member:byId(id),count:c}))
+     .filter(x=>x.member&&x.member.eligible)
+     .sort((x,y)=>y.count-x.count)
+     .slice(0,3);
+   return `<div class="rankCard"><div class="kicker">${a.icon} ${a.name}</div>${list.length?list.map((x,i)=>`<p><b>#${i+1} ${esc(x.member.name)}</b><br><small>${esc(x.member.role)}</small></p>`).join(""):"<p>No trend yet</p>"}<small>Trend only • Not final result</small></div>`;
+ }).join("");
+}
+function ownSummary(){return awards.map(a=>`<div class="stat"><b>${a.name}</b><p>You selected: ${esc(byId(draft.choices[a.key])?.name||"")}</p><p>Appreciation: ${esc(draft.remarks[a.key]||"")}</p></div>`).join("")}function resetSession(){currentUser=null;stage="login";renderStage();renderTop()}
+
+let currentTrivia=null;
+let triviaWrongCount=0;
+let rightCount=0;
+let triviaAttemptedThisQuestion=false;
+let remainingTriviaIndexes=[];
+
+const triviaBank=[{"q": "Which Antarctic light display is scientifically called Aurora Australis?", "a": "AURORA", "hint": "Think of glowing curtains in the polar sky."}, {"q": "What is the 9-letter second word in Aurora Australis?", "a": "AUSTRALIS", "hint": "Think of the Latin-style name used for the southern polar lights."}, {"q": "In a whiteout, which visual reference disappears between land and sky?", "a": "HORIZON", "hint": "Separates sky and ground."}, {"q": "Which navigation system uses satellites and precise timing?", "a": "GPS", "hint": "Think of the common technical abbreviation used in operations."}, {"q": "How many GPS satellites are normally needed for 3D position plus clock correction?", "a": "FOUR", "hint": "The receiver must solve position and clock error together. (Number in in words)"}, {"q": "What global reference system is commonly used for GPS coordinates?", "a": "WGS84", "hint": "Three letters and two numbers."}, {"q": "Which atmospheric layer affects HF radio and GPS signals?", "a": "IONOSPHERE", "hint": "Layer of atmosphere where maximum ionization happens."}, {"q": "Which radio band can communicate beyond line of sight using the ionosphere?", "a": "HF", "hint": "Two letter word."}, {"q": "Which radio type usually needs line of sight: VHF or HF?", "a": "VHF", "hint": "Handheld radios often use it."}, {"q": "What charged-particle stream from the Sun causes space weather effects?", "a": "SOLAR WIND", "hint": "The term used for transfering charge particles from sun to earth during a solar storm."}, {"q": "What event is a huge burst of plasma and magnetic field from the Sun?", "a": "CME", "hint": "A sudden burst of massive cloud of charge particle at sun's surface."}, {"q": "Which field shields Earth from much of the solar wind?", "a": "MAGNETIC FIELD", "hint": "Earth's prtotective layer for solar storm."}, {"q": "What storm disturbs Earth’s magnetosphere after solar activity?", "a": "GEOMAGNETIC STORM", "hint": "The technical/scientific term used for a solar storm."}, {"q": "What color is often produced by oxygen in auroras?", "a": "GREEN", "hint": "Think of the colour most often seen in aurora photographs."}, {"q": "Which gas can produce purple or pink auroral colors?", "a": "NITROGEN", "hint": "Think of the gas that makes up most of the air around us."}, {"q": "Which continent is the coldest, driest, highest and windiest?", "a": "ANTARCTICA", "hint": "Think of the continent where Bharati Station is located."}, {"q": "What type of wind flows downhill from the ice sheet?", "a": "KATABATIC", "hint": "Think of cold air flowing down from the ice sheet."}, {"q": "Which ocean water surrounds Antarctica ?", "a": "SOUTHERN OCEAN", "hint": "Ocean at the most southern part of the world."}, {"q": "What floating extension of land ice can crack and move?", "a": "ICE SHELF", "hint": "Crevesse generally formed at such parts (two words) ."}, {"q": "What hidden cracks in ice are dangerous during field travel?", "a": "CREVASSES", "hint": "Our piston bully was slipped into it."}, {"q": "What weak snow-covered feature may hide a crevasse?", "a": "SNOW BRIDGE", "hint": "An overhung structure made of snow that covers crevasses (two words)."}, {"q": "What visibility condition makes everything appear white?", "a": "WHITEOUT", "hint": "The other term used for blizzrd or low visibility in Antartctica."}, {"q": "What index describes how cold moving air feels on skin?", "a": "WIND CHILL", "hint": "Temperature feels much lower then actual due to this (two words)."}, {"q": "What treaty keeps Antarctica for peace and science?", "a": "ANTARCTIC TREATY", "hint": "Treaty formed in Dec 1, 1959."}, {"q": "Which station system keeps rooms warm and air controlled?", "a": "AHU", "hint": "The system at Bharati that handles fresh air."}, {"q": "Which system monitors alarms, power, and building services?", "a": "BMS", "hint": "The system that monitors overall station health."}, {"q": "Which machine clears snow and moves on tracks in Antarctica?", "a": "PISTENBULLY", "hint": "PB full name."}, {"q": "Which heavy machine is used for snow moving and towing support?", "a": "DOZER", "hint": "Think of the heavy machine commonly used for snow and towing support (one, 5 letter word)."}, {"q": "Which workshop role keeps vehicles alive in cold conditions?", "a": "MECHANIC", "hint": "Vehicle doctor."}, {"q": "Which system provides electricity for station life support?", "a": "GENERATOR", "hint": "Think of the station’s electrical lifeline (9 Letter word)."}, {"q": "What engineering principle means keeping backups ready?", "a": "REDUNDANCY", "hint": "Think of backup readiness before failure occurs (10 letter word)."}, {"q": "Which device converts seawater to fresh water at stations?", "a": "RO", "hint": "Two letters Abbriviation."}, {"q": "What is RO full form?", "a": "REVERSE OSMOSIS", "hint": "Think of seawater being forced through a membrane."}, {"q": "What protects cold-region pipelines from freezing?", "a": "HEAT TRACING", "hint": "Current flowing Conductive wire wounded over pipe lines to heat it up."}, {"q": "What kit is used for quick response to fuel spills?", "a": "SPILL KIT", "hint": "Yellow colored tub placed near the fuel farm."}, {"q": "Which science forecasts weather windows for safe operations?", "a": "METEOROLOGY", "hint": "Think of the field that studies wind, clouds, pressure and forecasts."}, {"q": "What instrument measures wind direction?", "a": "WIND VANE", "hint": "Two words."}, {"q": "What instrument measures wind speed?", "a": "ANEMOMETER", "hint": "A meter (10 letter word starts with A)."}, {"q": "What instrument measures air pressure?", "a": "BAROMETER", "hint": "A meter(9 letter word starts with B)."}, {"q": "Which weather condition limits flight and field visibility?", "a": "BLIZZARD", "hint": "High speed wind with heavy snow fall ."}, {"q": "What term means a safe time gap for flying or field activity?", "a": "WEATHER WINDOW", "hint": "Two words both starts with W."}, {"q": "What cold injury affects skin and tissue?", "a": "FROSTBITE", "hint": "Think of freezing damage to skin and tissue."}, {"q": "What whole-body cold emergency can be life-threatening?", "a": "HYPOTHERMIA", "hint": "Think of dangerous whole-body heat loss."}, {"q": "Which room supports emergency treatment and station health?", "a": "MEDICAL ROOM", "hint": "where treatment can be done."}, {"q": "What psychological challenge is linked with isolation and darkness?", "a": "WINTER OVER SYNDROME", "hint": "Think of the full phrase used in polar winter psychology."}, {"q": "Which quality prevents small conflicts from growing in winter?", "a": "PATIENCE", "hint": "Leadership virtue."}, {"q": "What daily habit supports hygiene and morale at station?", "a": "CLEANLINESS", "hint": "11 letter word starts with C."}, {"q": "Daily rotational duty to be vigilant for safe keeping of station ?", "a": "GALLY", "hint": "5 letter word starts with G."}, {"q": "What word means shared support and belonging in a station team?", "a": "COMMUNITY", "hint": "9 letter word sstarts with C."}, {"q": "Which satellite orbit type moves fast across the sky?", "a": "LEO", "hint": " Technical abbreviation of orbit at around 500km from earth surface."}, {"q": "What causes GPS error when signals bounce from surfaces?", "a": "MULTIPATH", "hint": "9 letter word Starts with M."}, {"q": "Which clock type helps GPS satellites keep precise time?", "a": "ATOMIC CLOCK", "hint": "Most precise clock ever made."}, {"q": "In coordinates, what measures north-south position?", "a": "LATITUDE", "hint": "8 letter word Starts with L."}, {"q": "In coordinates, what measures east-west position?", "a": "LONGITUDE", "hint": "5 letter word Starts with L."}, {"q": "Roughly how many kilometers is one degree of latitude?", "a": "111", "hint": "Think of the approximate kilometre value used for one degree of latitude."}, {"q": "Which science studies Earth’s magnetic field?", "a": "GEOMAGNETISM", "hint": "Think of Earth’s magnetic field science."}, {"q": "Which disturbance can affect radio communication?", "a": "IONOSPHERIC DISTURBANCE", "hint": "Changes happened in Ionosphere ."}, {"q": "Which system must stay alive for heating, water, communication and safety?", "a": "POWER SYSTEM", "hint": "Think of the full operational term linked with this question."}, {"q": "What protects equipment and people during electrical faults?", "a": "EARTHING", "hint": "Think of the safety path for electrical faults."}, {"q": "Which system detects smoke or fire early?", "a": "FIRE ALARM", "hint": "Think of the full operational term linked with this question."}, {"q": "Which gas may be used for inerting and is also linked to aurora colors?", "a": "NITROGEN", "hint": "Think of a common atmospheric gas also linked with auroral colours."}, {"q": "What activity reduces risk before field movement?", "a": "ROUTE ASSESSMENT", "hint": "Think of the full operational term linked with this question."}, {"q": "What markers can guide safe travel routes?", "a": "FLAGS", "hint": "Think of visual markers used on snow routes."}, {"q": "Which vehicle type spreads load over snow?", "a": "TRACKED VEHICLE", "hint": "Think about the piston bully type vehicle."}, {"q": "Which Indian organization supports satellite operations?", "a": "ISRO", "hint": "Think of the abbreviated organization name."}, {"q": "Which weather department is represented by meteorologists?", "a": "IMD", "hint": "Think of abbreviated organization name."}, {"q": "What is medical evacuation often shortened to?", "a": "MEDEVAC", "hint": "Think of the shortened term for emergency patient transport."}, {"q": "What essential resource must be conserved along with power and fuel?", "a": "WATER", "hint": "Think of something produced, treated and conserved at station."}, {"q": "What is the science of weather called?", "a": "METEOROLOGY", "hint": "This field studies weather, clouds, wind and pressure."}, {"q": "Which one studies weather: meteorology or metrology?", "a": "METEOROLOGY", "hint": "Think of the field that studies wind, clouds, pressure and forecasts."},  {"q": "What is the main risk from carbon monoxide exposure?", "a": "POISONING", "hint": "Think of an invisible gas hazard (9 letter word starts from P)."}, {"q": "What emergency item fights small fires?", "a": "FIRE EXTINGUISHER", "hint": "Think of the full operational term linked with this question."}, {"q": "What practice protects Antarctica from mixed waste pollution?", "a": "WASTE SEGREGATION", "hint": "Think of the full operational term linked with this question."}, {"q": "What do ice cores preserve for climate studies?", "a": "AIR BUBBLES", "hint": "Think of what ancient ice preserves from the atmosphere."},  {"q": "Which penguin breeds during Antarctic winter?", "a": "EMPEROR PENGUIN", "hint": "Think of the penguin named after a ruler."}, {"q": "What do penguins use better than wings for swimming?", "a": "FLIPPERS", "hint": "Penguins use these for underwater movement."}, {"q": "What human factor is operationally important in isolation?", "a": "MORALE", "hint": "Think of emotional strength during isolation (1 word starts from M)."}, {"q": "What solves more problems in winter than conflict?", "a": "COOPERATION", "hint": "Think of people solving problems together."}, {"q": "Which quality means helping without being asked?", "a": "INITIATIVE", "hint": "To initiate for helping"}, {"q": "In whiteout, what is safer than blind movement?", "a": "STOPPING", "hint": "In poor visibility, stopping can be safer than moving blindly."}, {"q": "Which system means satellite communication?", "a": "SATCOM", "hint": "abbriviation of sattelite communication."}, {"q": "What platform relays communication from space?", "a": "SATELLITE", "hint": "Think of a machine in space relaying communication or data."}, {"q": "What makes batteries drain faster in Antarctica?", "a": "COLD", "hint": "Think of the environmental condition that drains batteries."}, {"q": "What clothing strategy protects against cold?", "a": "LAYERING", "hint": "Think of wearing several protective levels."}, {"q": "What condition is created by blowing snow and strong wind?", "a": "BLIZZARD", "hint": "Think of severe snow-wind condition."}, {"q": "What attitude is essential before field travel?", "a": "PREPAREDNESS", "hint": "Think of readiness before field travel."}, {"q": "What is the core value of Stars of Bharati awards?", "a": "APPRECIATION", "hint": "Think of honouring good behaviour and contribution."}, {"q": "What must voters write for nominees?", "a": "APPRECIATION LINE", "hint": "Think of the full operational term linked with this question."}, {"q": "Which award is for morale and positivity?", "a": "AURORAL SPIRIT", "hint": "Think of the full operational term linked with this question."}, {"q": "Which award is for mission support and strength?", "a": "IRON PILLAR", "hint": "Think of the full operational term linked with this question."}, {"q": "Which award is for keeping the station together?", "a": "SENTINEL", "hint": "Think of the central keyword hidden in the award title."}, {"q": "What should be checked before starting vehicles in extreme cold?", "a": "FLUIDS", "hint": "Think of the liquids checked before operating machinery."}, {"q": "What machine component loses efficiency in severe cold?", "a": "BATTERY", "hint": "what is needed to start the vehicle ignition."}, {"q": "What must be monitored to prevent generator overload?", "a": "LOAD", "hint": "Think of what must be watched to avoid generator overload."}, {"q": "What medical habit is better than late treatment in Antarctica?", "a": "PREVENTION", "hint": "In Antarctica, avoiding illness is safer than treating it late."}, {"q": "Which team member tracks stores and supplies?", "a": "INVENTORY MANAGER", "hint": "who is hired for managing stock items in anatarctica."}, {"q": "What system removes wastewater contaminants?", "a": "SEWAGE TREATMENT", "hint": ".......treatment plant."}, {"q": "What is essential in emergencies: panic or calm?", "a": "CALM", "hint": "Think of steadiness during emergencies."}, {"q": "What helps prevent groupism in winter teams?", "a": "INCLUSION", "hint": "to include every member in group so they feel included."}];
+
+function triviaKey(){
+ return currentUser ? "triviaSeen_"+currentUser.id : "triviaSeen_guest";
+}
+function initTriviaForUser(){
+ rightCount=Number(localStorage.getItem("triviaRight_"+(currentUser?.id||"guest"))||0);
+ triviaWrongCount=Number(localStorage.getItem("triviaWrong_"+(currentUser?.id||"guest"))||0);
+ let seen=JSON.parse(localStorage.getItem(triviaKey())||"[]");
+ if(seen.length>=triviaBank.length){
+   seen=[];
+   localStorage.setItem(triviaKey(),JSON.stringify(seen));
+ }
+ remainingTriviaIndexes=triviaBank.map((_,i)=>i).filter(i=>!seen.includes(i));
+ updateTriviaPills();
+}
+function saveTriviaCounts(){
+ if(!currentUser)return;
+ localStorage.setItem("triviaRight_"+currentUser.id,String(rightCount));
+ localStorage.setItem("triviaWrong_"+currentUser.id,String(triviaWrongCount));
+}
+function newTrivia(){
+ if(!remainingTriviaIndexes.length){
+   localStorage.setItem(triviaKey(),JSON.stringify([]));
+   remainingTriviaIndexes=triviaBank.map((_,i)=>i);
+ }
+ const pickPos=Math.floor(Math.random()*remainingTriviaIndexes.length);
+ const idx=remainingTriviaIndexes.splice(pickPos,1)[0];
+ const seen=JSON.parse(localStorage.getItem(triviaKey())||"[]");
+ seen.push(idx);
+ localStorage.setItem(triviaKey(),JSON.stringify([...new Set(seen)]));
+ currentTrivia=triviaBank[idx];
+ triviaAttemptedThisQuestion=false;
+ const q=document.getElementById("triviaQuestion"),a=document.getElementById("triviaAnswer"),r=document.getElementById("triviaResult");
+ if(q)q.textContent=currentTrivia.q;
+ if(a)a.value="";
+ if(r)r.textContent="Read the facts carefully, Answer correctly and be on top of the leaderboard.";
+ updateTriviaPills();
+}
+function checkTrivia(){
+ const a=document.getElementById("triviaAnswer"),r=document.getElementById("triviaResult");
+ if(!currentTrivia||!a||!r)return;
+ const user=a.value.trim().toUpperCase().replace(/\s/g,"");
+ const ans=currentTrivia.a.toUpperCase().replace(/\s/g,"");
+ if(user===ans){
+   if(!triviaAttemptedThisQuestion){
+     rightCount++;
+     triviaAttemptedThisQuestion=true;
+   }
+   r.textContent=`✅ Correct! Right: ${rightCount} | Wrong: ${triviaWrongCount}`;
+ }else{
+   if(!triviaAttemptedThisQuestion){
+     triviaWrongCount++;
+     triviaAttemptedThisQuestion=true;
+   }
+   r.textContent=`❄️ Not correct. Hint: ${currentTrivia.hint}. Right: ${rightCount} | Wrong: ${triviaWrongCount}`;
+ }
+ saveTriviaCounts();
+ updateTriviaPills();
+ syncTriviaScore();
+ renderTriviaLeaderboard();
+}
+function updateTriviaPills(){
+ const right=document.getElementById("rightPill"),wrong=document.getElementById("wrongPill"),acc=document.getElementById("accuracyPill"),rem=document.getElementById("remainingPill");
+ const total=rightCount+triviaWrongCount;
+ const pct=total?Math.round((rightCount/total)*100):0;
+ if(right)right.textContent=`Right: ${rightCount}`;
+ if(wrong)wrong.textContent=`Wrong: ${triviaWrongCount}`;
+ if(acc)acc.textContent=`Accuracy: ${pct}%`;
+ if(rem)rem.textContent=`Questions left: ${remainingTriviaIndexes.length}`;
+}
+function getLocalTriviaScores(){
+ return JSON.parse(localStorage.getItem("triviaLeaderboardV1")||"{}");
+}
+function saveLocalTriviaScores(scores){
+ localStorage.setItem("triviaLeaderboardV1",JSON.stringify(scores));
+}
+async function syncTriviaScore(){
+ if(!currentUser)return;
+ const total=rightCount+triviaWrongCount;
+ const accuracy=total?Math.round((rightCount/total)*100):0;
+ const payload={voterId:currentUser.id,name:currentUser.name,right:rightCount,wrong:triviaWrongCount,accuracy,time:new Date().toISOString()};
+ try{
+   await fetch("/api/trivia-score",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+ }catch(e){
+   const scores=getLocalTriviaScores();
+   scores[currentUser.id]=payload;
+   saveLocalTriviaScores(scores);
+ }
+}
+async function loadTriviaLeaderboard(){
+ try{
+   const res=await fetch("/api/trivia-leaderboard",{cache:"no-store"});
+   if(res.ok){
+     const data=await res.json();
+     return Array.isArray(data)?data:(data.leaderboard||[]);
+   }
+ }catch(e){}
+ return Object.values(getLocalTriviaScores());
+}
+async function renderTriviaLeaderboard(){
+ const tbody=document.getElementById("triviaLeaderboard");
+ if(!tbody)return;
+ const rows=(await loadTriviaLeaderboard())
+   .sort((a,b)=>(b.right||0)-(a.right||0)||(a.wrong||0)-(b.wrong||0))
+   .slice(0,10);
+ if(!rows.length){
+   tbody.innerHTML=`<tr><td colspan="5">No trivia scores yet.</td></tr>`;
+   return;
+ }
+ tbody.innerHTML=rows.map((r,i)=>{
+   const total=(r.right||0)+(r.wrong||0);
+   const acc=total?Math.round(((r.right||0)/total)*100):0;
+   return `<tr><td>#${i+1}</td><td>${esc(r.name||"Unknown")}</td><td>${r.right||0}</td><td>${r.wrong||0}</td><td>${acc}%</td></tr>`;
+ }).join("");
+}
+setInterval(()=>{if(document.getElementById("triviaLeaderboard"))renderTriviaLeaderboard();},10000);
+
+function showAdminLogin(){const pin=prompt("Enter leader/admin PIN");if(pin!=="Bharat2026"){alert("Wrong PIN");return}renderAdmin()}
+async function renderAdmin(){
+ const votes=await loadAllVotes();
+ const valid=votes.filter(v=>!v.disqualified);
+ const unique=new Set(valid.map(v=>v.voterId));
+ const dups=[...votes.reduce((m,v)=>{m.set(v.voterId,(m.get(v.voterId)||0)+1);return m},new Map()).entries()]
+   .filter(([id,c])=>c>1)
+   .map(([id,c])=>`${byId(id)?.name||id} (${c})`);
+
+ const el=document.getElementById("adminPanel");
+ el.classList.remove("hidden");
+ el.innerHTML=`<div class="row" style="justify-content:space-between"><div><div class="kicker">Leader/Admin Panel</div><h2>Review, Admin Selection, Export, Certificates</h2></div><button class="danger" onclick="document.getElementById('adminPanel').classList.add('hidden')">Close</button></div>
+ <div class="grid grid3" style="margin:14px 0">
+   <div class="stat"><small>Voting Progress</small><b>${unique.size} / 24 members voted</b><div class="progress" style="margin-top:10px"><div style="width:${Math.round(unique.size/24*100)}%"></div></div></div>
+   <div class="stat"><small>Duplicate Alert</small><b>${dups.length?dups.join(", "):"No duplicate detected"}</b></div>
+   <div class="stat"><small>Admin PIN</small><b>Bharat2026</b></div>
+ </div>
+ <div class="tabs">
+   <button onclick="exportAllCSV()">Export CSV</button>
+   <button class="secondary" onclick="renderAdminAwardSelection()">Admin Award Selection</button>
+   <button class="secondary" onclick="generateCertificates()">Generate Certificates</button>
+   <button class="secondary" onclick="generateBadges()">Generate Digital Badges</button>
+   <button class="secondary" onclick="showMemberPins()">Show Member PINs</button>
+   <button class="danger" onclick="clearAllVotes()">Clear Local Cache</button>
+   <button onclick="resetTrivia()">Reset Trivia Leaderboard</button>
+ </div>
+ <div id="pinPanel" class="hidden"></div>
+ <div id="leaderScorePanel"></div>
+ <h3>Raw Vote Review</h3>
+ <table class="table"><thead><tr><th>Time</th><th>Voter</th><th>Aurora</th><th>Iron</th><th>Sentinel</th><th>Status</th><th>Action</th></tr></thead>
+ <tbody>${votes.map(v=>`<tr>
+   <td>${new Date(v.time).toLocaleString()}</td>
+   <td>${esc(v.voterName)}</td>
+   <td>${esc(byId(v.choices?.aurora)?.name||"")}</td>
+   <td>${esc(byId(v.choices?.pillar)?.name||"")}</td>
+   <td>${esc(byId(v.choices?.sentinel)?.name||"")}</td>
+   <td>${v.disqualified?"Disqualified":"Qualified"}</td>
+   <td><button class="secondary" onclick="toggleDQ(${v.id})">${v.disqualified?"Qualify":"Disqualify"}</button></td>
+ </tr>`).join("")}</tbody></table>`;
+}
+async function renderAdminAwardSelection(){
+ const choices=await getServerAdminChoices();
+ saveAdminChoices(choices);
+ const panel=document.getElementById("leaderScorePanel");
+ panel.innerHTML=`<div class="card" style="box-shadow:none;margin-top:14px"><div class="kicker">Admin Award Selection</div><h2>Final Admin Selection for Three Awards</h2><p>Select one member for each award, similar to the voter panel. Varun is disabled as Station Leader.</p>${awards.map(a=>`<div class="card award" style="box-shadow:none;margin-top:12px"><h3>${a.icon} ${a.name}</h3><p>${esc(a.voteHint)}</p><select onchange="setAdminChoice('${a.key}',this.value)">${adminOptions(choices[a.key]||"",a.key)}</select></div>`).join("")}</div>`;
+}
+function adminOptions(selected="",awardKey=""){
+ const choices=getAdminChoices();
+ const used=awards.filter(a=>a.key!==awardKey).map(a=>String(choices[a.key]||"")).filter(Boolean);
+ return `<option value="">Select member</option>`+members.map(m=>{
+   const already=used.includes(String(m.id));
+   const disabled=m.id===1||already?"disabled":"";
+   const sel=String(m.id)===String(selected)?"selected":"";
+   let note=m.id===1?" (Station Leader - not eligible)":already?" (Already selected for another award)":"";
+   return `<option value="${m.id}" ${disabled} ${sel}>${esc(m.name)} — ${esc(m.role)}${note}</option>`;
+ }).join("");
+}async function setAdminChoice(k,id){
+ const c=getAdminChoices();
+ c[k]=id;
+ saveAdminChoices(c);
+ await setServerAdminChoice(k,id);
+ renderAdminAwardSelection();
+}function getAdminChoices(){return JSON.parse(localStorage.getItem("adminChoicesFinal")||"{}")}function saveAdminChoices(c){localStorage.setItem("adminChoicesFinal",JSON.stringify(c))}
+function showMemberPins(){const p=document.getElementById("pinPanel");p.classList.toggle("hidden");p.innerHTML=`<table class="table"><thead><tr><th>No</th><th>Name</th><th>Mobile</th><th>PIN</th></tr></thead><tbody>${members.map(m=>`<tr><td>${m.id}</td><td>${esc(m.name)}</td><td>${esc(m.mobile)}</td><td><b>${esc(m.pin)}</b></td></tr>`).join("")}</tbody></table>`}async function toggleDQ(id){
+ id=Number(id);
+ if(!Number.isFinite(id)){alert("Invalid vote ID. Please reopen the admin panel.");return}
+ const votes=await loadAllVotes();
+ const rec=votes.find(v=>Number(v.id)===id);
+ if(!rec){alert("Vote record not found. Please refresh the admin panel.");return}
+ const newState=!rec.disqualified;
+ const ok=await setVoteDisqualifiedOnServer(id,newState);
+ if(!ok){alert("Server not reachable. Disqualification was not saved.");return}
+ renderAdmin();
+ renderTop();
+}
+function winners(){const s=score(),choices=getAdminChoices();return awards.map(a=>{const chosen=choices[a.key]?byId(choices[a.key]):null;if(chosen&&chosen.eligible)return{award:a,winner:chosen};const best=Object.entries(s[a.key]).map(([id,c])=>({member:byId(id),count:c})).filter(x=>x.member&&x.member.eligible).sort((x,y)=>y.count-x.count)[0];return{award:a,winner:best?.member}})}
+function generateCertificates(){const panel=document.getElementById("certificatePanel");panel.classList.remove("hidden");panel.innerHTML=winners().map(w=>`<div class="cert"><img class="certLogoLeft" src="photos/45isea_logo.jpeg" onerror="this.style.display='none'"><img class="certLogoRight" src="photos/iap_logo.jpeg" onerror="this.style.display='none'"><h2>Certificate of Appreciation</h2><h3>${w.award.icon} ${esc(w.award.name)}</h3><div class="appreciation" style="font-size:22px;color:#8a5a00">“${esc(w.award.tagline)}”</div><p>This certificate is proudly presented to</p><div class="winner">${esc(w.winner?.name||"Winner To Be Finalized")}</div><div class="appreciation">${esc(w.award.certLead)}</div><p><b>45th ISEA • Bharati Station, Antarctica</b></p><p style="margin-top:26px">Station Leader Signature: ____________________ &nbsp;&nbsp;&nbsp; Date: ____________________</p></div>`).join("")+`<div class="noPrint" style="text-align:center"><button onclick="window.print()">Print A4 Landscape Certificates</button></div>`;panel.scrollIntoView({behavior:"smooth"})}
+
+function shieldFrameSvg(theme){
+ const stroke = theme==="aurora" ? "#0b7fb0" : theme==="pillar" ? "#7b5a34" : "#0f5b43";
+ const fill1 = theme==="aurora" ? "#082044" : theme==="pillar" ? "#2c2d2e" : "#063b2c";
+ const fill2 = theme==="aurora" ? "#123d73" : theme==="pillar" ? "#4c4237" : "#07563d";
+ return `
+ <svg viewBox="0 0 260 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold_${theme}" x1="0" x2="1">
+      <stop offset="0" stop-color="#8a5a00"/>
+      <stop offset=".20" stop-color="#fff1a8"/>
+      <stop offset=".50" stop-color="#ffd166"/>
+      <stop offset=".80" stop-color="#b7791f"/>
+      <stop offset="1" stop-color="#fff8d6"/>
+    </linearGradient>
+    <linearGradient id="body_${theme}" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="${fill2}"/>
+      <stop offset="1" stop-color="${fill1}"/>
+    </linearGradient>
+  </defs>
+  <path d="M130 8 C168 38 211 28 238 58 L220 204 C211 253 175 290 130 310 C85 290 49 253 40 204 L22 58 C49 28 92 38 130 8Z"
+        fill="url(#gold_${theme})" stroke="#fff1a8" stroke-width="3"/>
+  <path d="M130 28 C162 52 196 45 218 68 L202 198 C194 237 164 269 130 286 C96 269 66 237 58 198 L42 68 C64 45 98 52 130 28Z"
+        fill="url(#body_${theme})" stroke="${stroke}" stroke-width="4"/>
+  <path d="M130 39 C158 60 187 55 206 74 L191 194 C184 229 158 256 130 271 C102 256 76 229 69 194 L54 74 C73 55 102 60 130 39Z"
+        fill="none" stroke="url(#gold_${theme})" stroke-width="3" opacity=".9"/>
+  <path d="M62 230 C92 252 168 252 198 230" fill="none" stroke="url(#gold_${theme})" stroke-width="3" opacity=".8"/>
+  <circle cx="130" cy="35" r="8" fill="url(#gold_${theme})" stroke="#fff1a8"/>
+ </svg>`;
+}
+function shieldIconSvg(theme){
+ if(theme==="aurora"){
+   return `<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="auroraBg" cx="50%" cy="45%" r="60%">
+        <stop offset="0" stop-color="#1be7ff" stop-opacity=".65"/>
+        <stop offset=".55" stop-color="#4724a8" stop-opacity=".55"/>
+        <stop offset="1" stop-color="#041221"/>
+      </radialGradient>
+    </defs>
+    <circle cx="90" cy="90" r="78" fill="url(#auroraBg)" stroke="#e7fbff" stroke-width="4"/>
+    <path d="M25 55 C48 20 70 92 90 40 C112 -10 125 90 158 34" fill="none" stroke="#76ffb8" stroke-width="8" stroke-linecap="round" opacity=".85"/>
+    <path d="M32 72 C58 35 72 110 96 56 C116 15 132 108 150 62" fill="none" stroke="#ff7ad9" stroke-width="6" stroke-linecap="round" opacity=".75"/>
+    <path d="M22 124 L58 88 L82 116 L104 80 L158 124 Z" fill="#dff8ff"/>
+    <path d="M22 124 L58 88 L82 116 L104 80 L158 124 L158 142 L22 142 Z" fill="#0b2e4d"/>
+    <path d="M58 88 L70 118 L82 116 L104 80 L120 120 L158 124" fill="none" stroke="#ffffff" stroke-width="4"/>
+   </svg>`;
+ }
+ if(theme==="pillar"){
+   return `<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="stone" x1="0" x2="1">
+        <stop offset="0" stop-color="#b8c6c9"/>
+        <stop offset=".5" stop-color="#51616a"/>
+        <stop offset="1" stop-color="#e7f0f2"/>
+      </linearGradient>
+      <linearGradient id="ice" x1="0" x2="1">
+        <stop offset="0" stop-color="#dff8ff"/>
+        <stop offset="1" stop-color="#4dbfe7"/>
+      </linearGradient>
+    </defs>
+    <path d="M15 125 L45 82 L65 112 L92 70 L120 112 L142 88 L166 125 Z" fill="#f4d7a1" stroke="#3b2b1c" stroke-width="3"/>
+    <path d="M18 125 L55 96 L82 122 L115 88 L164 125 L164 146 L18 146 Z" fill="url(#ice)" opacity=".8"/>
+    <rect x="72" y="38" width="36" height="96" rx="5" fill="url(#stone)" stroke="#161616" stroke-width="4"/>
+    <rect x="63" y="31" width="54" height="16" rx="3" fill="url(#stone)" stroke="#161616" stroke-width="4"/>
+    <rect x="66" y="130" width="48" height="14" rx="3" fill="url(#stone)" stroke="#161616" stroke-width="4"/>
+    <path d="M88 42 L82 125" stroke="#1a252a" stroke-width="3" opacity=".5"/>
+    <path d="M102 48 L94 130" stroke="#ffffff" stroke-width="2" opacity=".55"/>
+   </svg>`;
+ }
+ return `<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="greenBadge" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#0c6b4c"/>
+      <stop offset="1" stop-color="#031d17"/>
+    </radialGradient>
+    <linearGradient id="goldMap" x1="0" x2="1">
+      <stop offset="0" stop-color="#8a5a00"/>
+      <stop offset=".5" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#fff1a8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="90" cy="90" r="76" fill="url(#greenBadge)" stroke="#ffd166" stroke-width="5"/>
+  <path d="M90 18 L94 90 L162 90 M90 18 L86 90 L18 90 M33 48 C70 80 110 80 147 48 M33 132 C70 100 110 100 147 132" stroke="#d8b45f" stroke-width="2" opacity=".65" fill="none"/>
+  <path d="M53 120 C45 94 56 59 85 50 C110 42 133 56 139 80 C128 72 112 73 99 84 C88 93 76 98 61 96 C63 108 62 115 53 120Z" fill="#eef7f8" stroke="#102b28" stroke-width="4"/>
+  <path d="M102 80 C116 80 127 87 134 98 C120 93 109 91 97 99 C83 107 70 107 58 100 C74 101 86 94 102 80Z" fill="#d7eef0"/>
+  <circle cx="102" cy="70" r="4" fill="#04110f"/>
+  <path d="M128 88 L148 98 L128 101" fill="#fff" stroke="#102b28" stroke-width="2"/>
+  <path d="M40 132 L70 132 L85 150 L52 150 Z" fill="url(#goldMap)" opacity=".85"/>
+  <rect x="124" y="124" width="28" height="18" fill="#2c2111" stroke="#ffd166" stroke-width="2"/>
+  <rect x="119" y="142" width="38" height="5" fill="#ffd166"/>
+ </svg>`;
+}
+function generateBadges(){
+ const panel=document.getElementById("certificatePanel");
+ panel.classList.remove("hidden");
+ const monthName=new Date().toLocaleString("en-US",{month:"long",year:"numeric"}).toUpperCase();
+ const themeMap={aurora:"aurora",pillar:"pillar",sentinel:"sentinel"};
+ panel.innerHTML=`<div class="noPrint shieldNote">Premium individual winner shields. Use “Download PNG” for WhatsApp sharing.</div>
+ <div class="shieldBadgeGrid">`+
+ winners().map(w=>{
+   const key=w.award.key;
+   const theme=themeMap[key]||"sentinel";
+   const winner=esc(w.winner?.name||"Winner To Be Finalized");
+   return `<div class="shieldBadgeCard">
+    <div class="shieldBadge" id="shield_${key}">
+      <div class="shieldSnow"></div>
+      <div class="shieldFrame">${shieldFrameSvg(theme)}</div>
+      <div class="shieldIconArt">${shieldIconSvg(theme)}</div>
+      <div class="shieldAwardText">${esc(w.award.name)}</div>
+      <div class="shieldMonth">${monthName}</div>
+      <div class="shieldWinnerLabel">Winner</div>
+      <div class="shieldWinnerName">${winner}</div>
+      <div class="shieldStation">❄ Bharati 45 ISEA ❄</div>
+    </div>
+    <button class="shieldDownloadBtn noPrint" onclick="downloadShieldBadge('shield_${key}','${esc(w.award.name)}_${winner}')">Download PNG</button>
+   </div>`;
+ }).join("")+`</div>`;
+ panel.scrollIntoView({behavior:"smooth"});
+}
+async function downloadShieldBadge(id,name){
+ const el=document.getElementById(id);
+ if(!el){alert("Badge not found.");return}
+ if(typeof html2canvas==="undefined"){
+   alert("PNG export library is not loaded. Keep internet ON for CDN or add html2canvas.min.js locally.");
+   return;
+ }
+ const canvas=await html2canvas(el,{scale:4,backgroundColor:null,useCORS:true});
+ const link=document.createElement("a");
+ link.download=name.replace(/[^a-z0-9_ -]/gi,"_").replace(/\s+/g,"_")+".png";
+ link.href=canvas.toDataURL("image/png");
+ link.click();
+}
+
+function downloadBadge(id,name){
+ const el=document.getElementById(id);
+ html2canvas(el,{scale:3}).then(canvas=>{
+   const link=document.createElement('a');
+   link.download=name.replace(/\s/g,'_')+'.png';
+   link.href=canvas.toDataURL();
+   link.click();
+ });
+}
+
+function rowsAll(){
+ const rows=[["Timestamp","Voter Name","Aurora Winner","Iron Winner","Sentinel Winner","Remarks","Validity"]];
+ getVotes().forEach(v=>{
+   const aur=byId(v.choices.aurora)?.name||"";
+   const iron=byId(v.choices.pillar)?.name||"";
+   const sent=byId(v.choices.sentinel)?.name||"";
+   const remarks=[`Aurora: ${v.remarks.aurora||""}`,`Iron: ${v.remarks.pillar||""}`,`Sentinel: ${v.remarks.sentinel||""}`].join(" | ");
+   rows.push([v.time||"",v.voterName||"",aur,iron,sent,remarks,v.disqualified?"Disqualified":"Valid"]);
+ });
+ return rows;
+}function downloadCSV(rows,name){const csv=rows.map(r=>r.map(x=>`"${String(x??"").replace(/"/g,'""')}"`).join(",")).join("\n");const blob=new Blob([csv],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();URL.revokeObjectURL(url)}function exportAllCSV(){
+ window.location.href="/api/export-csv";
+}function exportOwnCSV(){if(!currentUser)return;downloadCSV([["award","selected_member","appreciation_line"],...awards.map(a=>[a.name,byId(draft.choices[a.key])?.name||"",draft.remarks[a.key]||""])],`my_vote_${currentUser.name}.csv`)}
+
+async function refreshSharedData(){
+ renderTop();
+ const admin=document.getElementById("adminPanel");
+ const active=document.activeElement;
+ const isTyping=active && ["INPUT","TEXTAREA","SELECT"].includes(active.tagName);
+ if(admin && !admin.classList.contains("hidden") && !isTyping){
+   renderAdmin();
+ }
+}
+setInterval(refreshSharedData,10000);
+
+document.addEventListener("keydown",e=>{const modal=document.getElementById("photoModal");if(modal&&modal.classList.contains("open")){if(e.key==="Escape")closePhoto();if(e.key==="ArrowRight")nextPhoto();if(e.key==="ArrowLeft")prevPhoto();}});
+async function resetTrivia(){
+  if(!confirm("Reset trivia leaderboard for all users?")) return;
+  const res=await fetch("/api/clear-trivia",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({adminPin:"Bharat2026"})
+  });
+  if(!res.ok){alert("Trivia reset failed. Please check Flask server.");return}
+  localStorage.removeItem("triviaLeaderboardV1");
+  members.forEach(m=>{
+    localStorage.removeItem("triviaRight_"+m.id);
+    localStorage.removeItem("triviaWrong_"+m.id);
+    localStorage.removeItem("triviaSeen_"+m.id);
+  });
+  alert("Trivia leaderboard reset successfully");
+  renderTriviaLeaderboard();
+}
+
+init();
+
+function clearVotes(){
+  if(!confirm("Are you sure you want to clear all votes?")) return;
+  fetch("/api/clear-votes",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({adminPin:"Bharat2026"})
+  })
+  .then(r=>r.json())
+  .then(d=>{
+    if(d.ok){
+      alert("Votes cleared successfully");
+      location.reload();
+    }else{
+      alert("Error: "+(d.error||"Failed"));
+    }
+  });
+}
+
+function renderOptions(correct){
+  const container=document.getElementById("puzzleOptions");
+  if(!container) return;
+  let options=[correct];
+  while(options.length<4){
+    let rand=correct.split(" ")[0]+Math.floor(Math.random()*10);
+    if(!options.includes(rand)) options.push(rand);
+  }
+  options.sort(()=>Math.random()-0.5);
+  container.innerHTML=options.map(o=>`<button onclick="selectOption('${o}','${correct}')">${o}</button>`).join("");
+}
+
+function selectOption(sel,correct){
+  if(sel.toLowerCase()==correct.toLowerCase()){
+    alert("Correct!");
+  }else{
+    alert("Wrong!");
+  }
+}
+</script><div id="puzzleOptions" style="margin-top:10px;"></div></body></html>
